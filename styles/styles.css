@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'FunnelDisplay';
+    src: url(/fonts/FunnelDisplay-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'FunnelSans';
+    src: url(/fonts/FunnelSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'FunnelSansItalic';
+    src: url(/fonts/FunnelSans-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'NotoSansMono';
+    src: url(/fonts/NotoSansMono-VariableFont_wdth\,wght.ttf);
+}
+
+html {
+    --foreground-color: #000000;
+    --background-color: #EBEBEB;
+    --button-color: #B33822;
+
+    --secondary-color: #F6F6F6;
+    --tertiary-color: #E5E9EC;
+
+    /* use as embellishments and for type in darker areas */
+    --highlight-color-1: #63A55A;
+    --highlight-color-2: #C4C3FF;
+    --highlight-color-3: #E9CBD1;
+    --highlight-color-4: #AFCBE1;
+
+    --sans_serif: 'FunnelSans', system-ui, 'Segoe', sans-serif;
+    --display_font: 'FunnelDisplay', system-ui, 'Segoe', sans-serif;
+    --contrast_mono: 'NotoSansMono', Courier New, serif;
+
+    --wrapper: 0.5rem;
+    --rhythm: 1.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    background-color: var(--background-color);
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--display_font);
+}
+
+p, li {
+    font-family: var(--sans_serif);
+}
+
+.mono {
+    font-family: var(--contrast_mono);
+}
+
+.top-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    /* flex-direction: row; */
+    width: 100%;
+    justify-content: center;
+    justify-items: space-between;
+    gap: 2rem;
+    /* margin-block-start: 2.5rem;
+    margin-block-end: 1.5rem; */
+    grid-template-columns: 2fr 2fr 2fr 1fr 2fr 2fr 2fr;
+    grid-area: "li li . li li li li" li;
+    align-items: center;
+
+    li {
+        text-transform: uppercase;
+    }
+}
+
+
+.links-div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.welcome-to-topicals {
+    background-image: url(graphics/home/banner_image_top.webp);
+}
+
+
+
+/* @media screen and (width >= 1100) {
+    
+} */
+
+/* make media queries for small medium large screens */ 
