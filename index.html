@@ -9,37 +9,48 @@
 </head>
 <!-- menu -->
 <ul class="top-menu"> 
-    <!-- <div class="links-div"> -->
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shopall.html">Shop All</a></li>
-    <li> </li>
-    <li> 
+    <li class="menu-item-1"><a href="index.html">Home</a></li>
+    <li class="menu-item-2"><a href="shopall.html">Shop All</a></li>
+    <li>Search</li>
+    <li class="menu-item-logo"> 
         <picture class="logo">
             <source type="webp" src="graphics/logo/logo.webp" width:"200" height:"300" />
             <img src="graphics/logo/logo.png" alt="logo" />
         </picture>
     </li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="account_html">Account</a></li>
-    <li>Shopping Cart</li>
+    <li class="menu-item-3"><a href="about.html">About</a></li>
+    <li class="menu-item-4"><a href="account_html">Account</a></li>
+    <li class="menu-item-5">Shopping Cart</li>
 </ul>
 <body>
-    <div class="welcome-to-topicals">
-        <img 
+    <div class="container">
+        <img class="home-page-banner"
             src="graphics/home/banner_image_top.webp" 
             alt="banner image welcome to topicals"
             width="700"
             height=""
         >
-        <h1>Welcome to Topicals.</h1>
-        <h3 class="mono">Shop topicals and all our products</h3>
+        <div class="bottom-left-text-container">
+            <h1>Welcome to Topicals.</h1>
+            <h3 class="mono">Shop topicals and all our products for your skincare needs.</h3>
+            <button class="shop-all-button">Shop All</button>
+        </div>
     </div>
 
-    <h2>Best Sellers</h2>
+    <section>
+        <h2>Best Sellers</h2>
+    </section>
 
-    <h2>Products for Discoloration</h2>
-
-    <h2>Products for Textured Skin</h2>
+    <section class="category-section">
+        <div class="container">
+            <img class="category-img" src="graphics/home/discoloration.webp" alt="products for discoloration">
+            <h2>Products for Discoloration</h2>
+        </div>
+        <div class="container">
+            <img class="category-img" src="graphics/home/textured_skiin.webp" alt="products for textured Skin">
+            <h2>Products for Textured Skin</h2>
+        </div>
+    </section>
 
 
     <!-- footer -->

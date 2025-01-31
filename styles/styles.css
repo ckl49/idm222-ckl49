@@ -38,6 +38,8 @@ html {
 
     --wrapper: 0.5rem;
     --rhythm: 1.5rem;
+    --transparency-film: rgba(0, 0, 0, 0.4);
+    --background-blur: blur(8px);
 }
 
 * {
@@ -48,14 +50,40 @@ html {
 img {
     height: auto;
     width: 100%;
+    border-radius: 1rem;
+    box-shadow: (0 4 8 #000000 0.15);
+    display: block;
+    align-self: center;
+    justify-self: center;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* width: 80vw; */
+    justify-items: center;
+    justify-self: center;
+    justify-content: center;
+}
+
 
 h1, h2, h3, h4, h5 {
     font-family: var(--display_font);
+    font-weight: 500;
 }
 
 p, li {
     font-family: var(--sans_serif);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-content: center;
+    width: 90vw;
+    height: auto;
+    
 }
 
 .mono {
@@ -72,16 +100,52 @@ p, li {
     justify-content: center;
     justify-items: space-between;
     gap: 2rem;
-    /* margin-block-start: 2.5rem;
-    margin-block-end: 1.5rem; */
-    grid-template-columns: 2fr 2fr 2fr 1fr 2fr 2fr 2fr;
-    grid-area: "li li . li li li li" li;
+    margin-block-start: 2.5rem;
+    margin-block-end: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr 2.5fr 1fr 1fr 1fr;
     align-items: center;
 
     li {
         text-transform: uppercase;
+        justify-self: center;
+        justify-content: center;
     }
 }
+/* 
+menu-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+menu-item-2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+menu-item-logo {
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+
+menu-item-3 {
+    grid-column-start: 5;
+    grid-column-end: 5;
+}
+
+menu-item-4 {
+    grid-column-start: 6;
+    grid-column-end: 6;
+}
+
+menu-item-5 {
+    grid-column-start: 7;
+    grid-column-end: 7;
+}
+
+menu-item-6 {
+    grid-column-start: 8;
+    grid-column-end: 8;
+} */
 
 
 .links-div {
@@ -90,8 +154,88 @@ p, li {
     gap: 1rem;
 }
 
-.welcome-to-topicals {
-    background-image: url(graphics/home/banner_image_top.webp);
+.container {
+    /* background-image: url(graphics/home/banner_image_top.webp); */
+    display: flex;
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    height: fit-content;
+    margin-inline-start: var(--wrapper);
+    margin-inline-end: var(--wrapper);
+}
+
+.home-page-banner {
+    width: 90vw;
+    height: auto;
+    object-fit: cover;
+    /* made so that i can adjust size but container can stay for all */
+}
+
+/* text in the bottom left of the corner on top of an image */
+.bottom-left-text-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+    padding: 1rem;
+    padding-right: 2rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: var(--transparency-film);
+    border-radius: 1rem;
+}
+
+.bottom-left-text-container > h1, h3 {
+    color: var(--background-color);
+    background-color: transparent;
+    margin: var(--wrapper);
+}
+
+.bottom-left-text-container > h3 {
+    opacity: 0.8;
+}
+
+.shop-all-button {
+    margin: var(--wrapper);
+    width: fit-content;
+    font-family: var(--sans_serif);
+    text-transform: uppercase;
+    justify-self: center;
+    justify-content: center;
+    background-color: var(--button-color);
+    color: var(--background-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--wrapper);
+    border-color: #E5E9EC;
+    border: 1px;
+    box-shadow: (0 4 8 #000000 0.15);
+}
+
+.category-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+.category-img {
+    width: 44vw;
+}
+
+.container > h2 {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+    padding: 1rem;
+    padding-right: 2rem;
+    position: absolute;
+    bottom: 17rem;
+    left: 10rem;
+    color: var(--background-color);
+    background-color: var(--transparency-film);
+    border-radius: 1rem;
 }
 
 
