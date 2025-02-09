@@ -8,25 +8,35 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <script src="js/main.js"></script>
     <header>
-        <ul class="top-menu">
-            <li class="menu-item-1"><a href="index.html">Home</a></li>
-            <li class="menu-item-2"><a href="shopall.html">Shop All</a></li>
-            <li>Search</li>
+        <nav class="top-menu">
+            <div class="left-side-of-menu flex-row">
+                <ul class="ul-grid">
+                    <li class="menu-item-1"><a href="index.html">Home</a></li>
+                    <li class="menu-item-2"><a href="shopall.html">Shop All</a></li>
+                    <li class="menu-item-3"><a href="about.html">About</a></li>
+                </ul>
+            </div>
             <li class="menu-item-logo">
                 <picture class="logo">
                     <source type="webp" src="graphics/logo/logo.webp" />
                     <img src="graphics/logo/logo.png" alt="logo" />
                 </picture>
             </li>
-            <li class="menu-item-3"><a href="about.html">About</a></li>
-            <li class="menu-item-4"><a href="account_html">Account</a></li>
-            <li class="menu-item-5">Shopping Cart</li>
+
+            <div class="right-side-of-menu flex-row">
+                <ul class="ul-grid">
+                    <li class="menu-item-4"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="#000" d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5l-1.5 1.5l-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16A6.5 6.5 0 0 1 3 9.5A6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14S14 12 14 9.5S12 5 9.5 5"/></svg></li>
+                    <li class="menu-item-5"><a href="account_html"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="#000" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg></a></li>
+                    <li class="menu-item-6"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="#000" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"/></svg></li>
+                </ul>
+            </div>
         </ul>
     </header>
     <main>
         <section class="product-header">
-            <div class="images-slideshow">
+            <div class="images-slideshow scrolldiv">
                 <img src="graphics/clearly_mask/clearly_mask_product1.webp" alt="">
                 <img src="graphics/clearly_mask/clearly_mask2.webp" alt="">
                 <img src="graphics/clearly_mask/clearly_mask3.webp" alt="">
@@ -39,30 +49,24 @@
             </div>
             <div class="product-information">
                 <div>
-                    <h1>Clearly Breakout Mask</h1>
+                    <div class="product-title">
+                        <h1>Clearly Breakout Mask</h1>
+                        <div class="price">
+                            <h1>$26</h1>
+                        </div>
+                    </div>
                     <div class="product-overview-individual">
-                        <div class="product-title-on-page">
+                        <div class="product-caption-on-page">
                             <h2>Clarifying and Calming Mask</h2>
                             <p>30 ml / 1.0 oz</p>
-                            <p>26$</p>
                         </div>
                         <div class="reviews-at-top">
                             <div class="stars">
-                                <svg class="star checked" viewBox="0 0 24 24">
-                                    <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.158L12 18.896l-7.334 3.853 1.4-8.158L.132 9.211l8.2-1.193z"/>
-                                    </svg>
-                                <svg class="star checked" viewBox="0 0 24 24">
-                                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.158L12 18.896l-7.334 3.853 1.4-8.158L.132 9.211l8.2-1.193z"/>
-                                        </svg>
-                                <svg class="star checked" viewBox="0 0 24 24">
-                                    <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.158L12 18.896l-7.334 3.853 1.4-8.158L.132 9.211l8.2-1.193z"/>
-                                </svg>
-                                <svg class="star checked" viewBox="0 0 24 24">
-                                    <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.158L12 18.896l-7.334 3.853 1.4-8.158L.132 9.211l8.2-1.193z"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.158L12 18.896l-7.334 3.853 1.4-8.158L.132 9.211l8.2-1.193z"/>
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
                             </div>
                     <div class="number_of_reviews">
                         <p>166 reviews</p>
@@ -93,18 +97,21 @@
                     <option>one-time purchase - 26$</option>
                     <option>subscribe and save 10% - $23</option>
                 </select> -->
-                <form class="subscription-form">
-                    <div class="subscription-option">
-                        <input type="radio" name="subscription" value="one-time">One-time purchase - 26$<br></div>
-                    <div class="subscription-option">
-                        <input type="radio" name="subscription" value="subscribe">Subscribe and save 10% - $23<br></div>
-                </form>
-                <button class="shop-all-button">Add to Bag - 26$</button>
+                <div>
+                    <form class="subscription-form">
+                        <div class="subscription-option">
+                            <input type="radio" name="subscription" value="one-time">One-time purchase - 26$<br></div>
+                        <div class="subscription-option">
+                            <input type="radio" name="subscription" value="subscribe">Subscribe and save 10% - $23<br></div>
+                    </form>
+                    <button class="shop-all-button">Add to Bag</button>
+                </div>
             </section>
         </section>
+
         <section class="beforeafter-section">
             <div class="clinical-proven-blurb">
-                <h3>This mask is clinically proven to—</h3>
+                <h3 >This mask is clinically proven to—</h3>
                     <ul>
                         <li>Reduce breakouts in 24 hours</li>
                         <li>Reduce oil and sebum production</li>
@@ -121,41 +128,130 @@
                     <figcaption>After</figcaption>
                 </figure>
             </div>
+    </section>
+
+        <section class="one-three-grid">
+            <div class="img-border">
+                <img src="graphics/clearly_mask/clearly_mask_faqs.png" alt="">
+            </div>
+            <div class="how-to-apply">
+                    <!-- div? needed if i wanted to make it different than the faqs -->
+                    <div class="border-bottom">
+                        <h4>How to Apply</h4>
+                        <p>Apply a thin layer all over clean skin (avoiding the eye area) for up to 15 minutes. Rinse off with cool water Use 2-3 times per week.</p>
+                    </div>
+                    <div class="border-bottom">
+                        <h4>Full Ingredients List</h4>
+                        <p>
+                            <p><b>Active Ingredient:</b> Colloidal Sulfur 5.00%</p>
+                            <p><b>Inactive Ingredients:</b> Water (Aqua), Propanediol, Kaolin, Stearic Acid, Glycerin, Cetearyl Alcohol, Ricinus Communis Seed Oil, Sodium Stearoyl Glutamate, Hectorite, Azelaic Acid, Zinc PCA, Daucus Carota Sativa Seed Oil, Punica Granatum Seed Oil, Aloe Barbadensis Leaf Juice, Allantoin, Panthenol, Charcoal Powder, Helianthus Annuus Seed Oil, Olea Europaea Fruit Oil, Helianthus Annuus Extract, Althaea Officinalis Root Extract, Salix Alba Bark Extract, Calendula Officinalis Flower, Daucus Carota Sativa Callus Culture Extract, Sodium Phytate, Ethylhexylglycerin, Caprylyl Glycol, Pentylene Glycol, Hypochlorous Acid, Citric Acid</p>
+                        </p>
+                    </div>
+                    <div>
+                        <h4>Shipping and Delivery</h4>
+                        <p>
+                            <p>Please note your order will take 1-3 days to process.</p>
+                            <p>Domestic Shipping: 2-8 business days</p>
+                            <p>Domestic Express: 1-3 business days</p>
+                            <p>Int'l Shipping - 6-8 business days</p>
+                        </p>
+                    </div>
+            </div>
         </section>
-        <section class="faq-section">
-            <!-- div? needed if i wanted to make it different than the faqs -->
-            <!-- <div> -->
-                <summary>How to Apply</summary>
-                <details>Apply a thin layer all over clean skin (avoiding the eye area) for up to 15 minutes. Rinse off with cool water Use 2-3 times per week.</details>
-            <!-- </div> -->
-            <!-- <div> -->
-                <summary>Full Ingredients List</summary>
-                <details>
-                    <p><b>Active Ingredient:</b> Colloidal Sulfur 5.00%</p>
-                    <p><b>Inactive Ingredients:</b></p>
-                    <p>Water (Aqua), Propanediol, Kaolin, Stearic Acid, Glycerin, Cetearyl Alcohol, Ricinus Communis Seed Oil, Sodium Stearoyl Glutamate, Hectorite, Azelaic Acid, Zinc PCA, Daucus Carota Sativa Seed Oil, Punica Granatum Seed Oil, Aloe Barbadensis Leaf Juice, Allantoin, Panthenol, Charcoal Powder, Helianthus Annuus Seed Oil, Olea Europaea Fruit Oil, Helianthus Annuus Extract, Althaea Officinalis Root Extract, Salix Alba Bark Extract, Calendula Officinalis Flower, Daucus Carota Sativa Callus Culture Extract, Sodium Phytate, Ethylhexylglycerin, Caprylyl Glycol, Pentylene Glycol, Hypochlorous Acid, Citric Acid</p>
-                </details>
-            <!-- </div>
-            <div> -->
-                <summary>Shipping and Delivery</summary>
-                <details>
-                    <p>Please note your order will take 1-3 days to process.</p>
-                    <p>Domestic Shipping: 2-8 business days</p>
-                    <p>Domestic Express: 1-3 business days</p>
-                    <p>Int'l Shipping - 6-8 business days</p>
-                    <p>Click here for our full shipping policy.</p>
-                </details>
-            <!-- </div> -->
+        <section class="carousel-section">
+            <h4>You might also like...</h4>
+            <!-- <div class="carousel"> -->
+                <div class="carousel scrolldiv">
+                    <div class="product-card">
+                        <img src="graphics/clearly_mask/clearly_mask_product1.webp" alt="">
+                        <a href="clearly_breakout_mask.html">
+                            <h2>Clearly Breakout Mask</h2>
+                        </a>
+                        <p>Clarifying and Calming Mask</p>
+                        <button class="shop-all-button">Add to Bag - 26$</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="graphics/slick_salve_acai/slick_salve_acai1.webp" alt="">
+                        <a href="slick_salve_acai.html">
+                            <h2>Slick Salve Balm - Acai</h2>
+                        </a>
+                        <p>Tinted Balm for Soothing + Hydration</p>
+                        <button class="shop-all-button">Add to Bag - $16</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="graphics/butter_moist/butter_moist1.webp" alt="">
+                        <a href="butter_moisturizer.html">
+                            <h2>Like Butter Moisturizer</h2>
+                        </a>
+                        <p>For Dry, Eczema-Prone Skin</p>
+                        <button class="shop-all-button">Add to Bag - 34$</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="graphics/slick_salve_mint/slick_salve_mint1.webp" alt="">
+                        <a href="slick_salve_mint.html">
+                            <h2>Slick Salve Lip Balm - Mint</h2>
+                        </a>
+                        <p>Glossy Balm for Soothing + Hydration</p>
+                        <button class="shop-all-button">Add to Bag - $16</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="graphics/slather_serum/slather_serum1.webp" alt="">
+                        <a href="exfoliating_body_serum.html">
+                            <h2>Slather Exfoliating Body Serum</h2>
+                        </a>
+                        <p>With Retinol and AHAs</p>
+                        <button class="shop-all-button">Add to Bag - 30$</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="graphics/faded_serum/faded_serum1.webp" alt="">
+                        <a href="faded_serum.html">
+                            <h2>Faded Serum</h2>
+                        </a>
+                        <p>For Dark Spots and Discoloration</p>
+                        <button class="shop-all-button">Add to Bag - 38$</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="graphics/scar_primer/scar_primer1.webp" alt="">
+                        <a href="scar-primer.html">
+                            <h2>Sealed Scar Filling Primer</h2>
+                        </a>
+                        <p>For Acne Scars and Large Pores</p>
+                        <button class="shop-all-button">Add to Bag - 38$</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="graphics/faded_mist/faded_mist1.webp" alt="">
+                        <a href="faded_mist.html">
+                            <h2>Faded Mist</h2>
+                        </a>
+                        <p>For Dark Spots and Discoloration</p>
+                        <button class="shop-all-button">Add to Bag - 32$</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="graphics/butter_mist/butter_mist1.webp" alt="">
+                        <a href="butter_mist.html">
+                            <h2>Like Butter Mist</h2>
+                        </a>
+                        <p>Hydration for Dry Skin</p>
+                        <button class="shop-all-button">Add to Bag - $30</button>
+                    </div>
+                </div>
+            </div>
         </section>
+     
         <section>
-            <div>
-                <h3>Key Ingredients</h3>
-                <ul>
-                    <li>Clinical-Strength Colloidal Sulfur : reduces breakouts and absorbs oil</li>
-                    <li>Hypochlorous Acid : purifies skin while calming redness and irritaion</li>
-                    <li>Azaelic Acid : promotes even tone and texture</li>
-                    <li>Willow Bark Extract : soothes irritation</li>
-                </ul>
+            <div class="video-key-ingredients-section">
+                <div>
+                    <video class="tutorial" src="graphics/clearly_mask/clearly_mask_vid.mov" width="320" height="240" controls></video>
+                </div>
+                <div class="key-ingredients-part">
+                    <h3>Key Ingredients</h3>
+                    <ul>
+                        <li><b>Clinical-Strength Colloidal Sulfur</b> : reduces breakouts and absorbs oil</li>
+                        <li><b>Hypochlorous Acid</b> : purifies skin while calming redness and irritation</li>
+                        <li><b>Azaelic Acid</b> : promotes even tone and texture</li>
+                        <li><b>Willow Bark Extract</b> : soothes irritation</li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section>
@@ -174,57 +270,136 @@
             </div>
         </section>
         <section class="reviews-section">
-            <div>
+            <div class="reviews-heading">
                 <h2>Reviews</h2>
-                <h3>Overall Rating</h3>
-                <p>4.9</p>
-                <p>Based on 166 reviews</p>
-                <p>99% would reccomend this product</p>
-                <h3>Rating Breakdown</h3>
+                <div class="review-overview">
+                    <div class="rating">
+                        <div class="number-of-stars">
+                            <h1 class="no-margin">4.9</h1>
+                        </div>
+                            <div class="stars-numbers">
+                                <div class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                                </div>
+                                <div class="number-of-reviews">
+                                    <p class="no-margin">166 reviews</p>
+                                </div>
+                            </div>
+                    </div>
+                <div class="percent-recommenders">
+                            <p>99% would reccomend this product</p>
+                </div>
+            </div>
             </div>
             <!-- Rating 1 -->
             <div class="review-single">
-                <p>Anonymous</p>
+                <div class="reviewer-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><path fill="#000" d="M12 19.2c-2.5 0-4.71-1.28-6-3.2c.03-2 4-3.1 6-3.1s5.97 1.1 6 3.1a7.23 7.23 0 0 1-6 3.2M12 5a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-3A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10c0-5.53-4.5-10-10-10" stroke-width="0.5" stroke="#000"/></svg>
+                    <p><b>Anonymous</b></p>
+                    <p>Verified Reviewer </p>
+                    <p>I recommend this product</p>
+                </div>
+                <div class="review-star-information">
+                    <div>
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                        </div>
+                        <div class="review-text">
+                        <p>Love this mask! It definitely has prevented a lot of my breakouts and I’ll buy more of this in the future</p>
+                        </div>
+                    </div>
+                <div class="time-relevance">
+                    <p>10 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!-- Rating 2 -->
+        <div class="review-single">
+            <div class="reviewer-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><path fill="#000" d="M12 19.2c-2.5 0-4.71-1.28-6-3.2c.03-2 4-3.1 6-3.1s5.97 1.1 6 3.1a7.23 7.23 0 0 1-6 3.2M12 5a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-3A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10c0-5.53-4.5-10-10-10" stroke-width="0.5" stroke="#000"/></svg>
+                <p><b>Char</b></p>
                 <p>Verified Reviewer </p>
                 <p>I recommend this product</p>
-                <p>10 hours ago</p>
-                <p>Love this mask! It definitely has prevented a lot of my breakouts and I’ll buy more of this in the future</p>
             </div>
-            <!-- Rating 2 -->
-            <div class="review-single">
-                <p>
-                    Char
-                    Verified Reviewer
-                    I recommend this product
-                    Rated 5 out of 5 stars
-                    14 hours ago
-                    This mask is so good! It’s easy to apply and it’s gentle on the skin. It calmed my skin - I actually had a bump that was sore to touch and after using this it wasn’t anymore! It went down a little too. I like that I can use this as a spot treatment or all over the face.
-                </p>
+            <div class="review-star-information">
+                <div>
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                    </div>
+                    <div class="review-text">
+                        <p>This mask is so good! It’s easy to apply and it’s gentle on the skin. It calmed my skin - I actually had a bump that was sore to touch and after using this it wasn’t anymore! It went down a little too. I like that I can use this as a spot treatment or all over the face.</p>
+                    </div>
+                </div>
+            <div class="time-relevance">
+                <p>14 hours ago</p>
             </div>
-            <!-- Rating 3 -->
-            <div class="review-single">
-                <p>
-                    Christan W.
-                    Verified Reviewer
-                    I recommend this product
-                    Rated 5 out of 5 stars
-                    17 hours ago
-                    I’ve been using the Clearly Breakout Mask for a few weeks now, and I am beyond impressed with the results. This mask is a must-have for anyone struggling with breakouts or uneven skin tone. The formula feels incredibly soothing on the skin, and I love that it’s made with natural, high-quality ingredients. After just a few uses, I noticed a significant reduction in the size of my blemishes. It doesn’t dry out my skin like some other masks do, but instead leaves it feeling hydrated, refreshed, and balanced. One of my favorite things about this product is how quick and easy it is to use. In just 10-15 minutes, my skin feels detoxified and smooth. Plus, it’s gentle enough to use regularly without irritating my sensitive skin.
-                    If you’re looking for a reliable, effective solution for breakouts, I can’t recommend the Clearly Breakout Mask enough. It’s worth every penny!
-                </p>
+        </div>
+    </div>
+    <!-- Rating 3 -->
+    <div class="review-single">
+        <div class="reviewer-info">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><path fill="#000" d="M12 19.2c-2.5 0-4.71-1.28-6-3.2c.03-2 4-3.1 6-3.1s5.97 1.1 6 3.1a7.23 7.23 0 0 1-6 3.2M12 5a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-3A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10c0-5.53-4.5-10-10-10" stroke-width="0.5" stroke="#000"/></svg>
+            <p><b>Christan W.</b></p>
+            <p>Verified Reviewer </p>
+            <p>I recommend this product</p>
+        </div>
+        <div class="review-star-information">
+            <div>
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                </div>
+                <div class="review-text">
+                    <p>I’ve been using the Clearly Breakout Mask for a few weeks now, and I am beyond impressed with the results. This mask is a must-have for anyone struggling with breakouts or uneven skin tone. The formula feels incredibly soothing on the skin, and I love that it’s made with natural, high-quality ingredients. After just a few uses, I noticed a significant reduction in the size of my blemishes. It doesn’t dry out my skin like some other masks do, but instead leaves it feeling hydrated, refreshed, and balanced. One of my favorite things about this product is how quick and easy it is to use. In just 10-15 minutes, my skin feels detoxified and smooth. Plus, it’s gentle enough to use regularly without irritating my sensitive skin.</p>
+                    <p>If you’re looking for a reliable, effective solution for breakouts, I can’t recommend the Clearly Breakout Mask enough. It’s worth every penny!</p>
+                </div>
             </div>
-            <!-- Rating 4 -->
-            <div class="review-single">
-                <p>
-                    Autumn
-                    Verified Reviewer
-                    I recommend this product
-                    Rated 5 out of 5 stars
-                    18 hours ago
-                    I have some acne breakouts on my skin and wanted a mask that I could use as a spot treatment. This mask is easy to apply and actually works if I use it consistently. It works on my sensitive skin too!
-                </p>
+        <div class="time-relevance">
+            <p>17 hours ago</p>
+        </div>
+        </div>
+    </div>
+    <!-- Rating 4 -->
+    <div class="review-single">
+        <div class="reviewer-info">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><path fill="#000" d="M12 19.2c-2.5 0-4.71-1.28-6-3.2c.03-2 4-3.1 6-3.1s5.97 1.1 6 3.1a7.23 7.23 0 0 1-6 3.2M12 5a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-3A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10c0-5.53-4.5-10-10-10" stroke-width="0.5" stroke="#000"/></svg>
+            <p><b>Autumn</b></p>
+            <p>Verified Reviewer </p>
+            <p>I recommend this product</p>
+        </div>
+        <div class="review-star-information">
+            <div>
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#d9c000" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z" stroke-width="0.5" stroke="#3e3700"/></svg>
+                </div>
+                <div class="review-text">
+                    <p>I have some acne breakouts on my skin and wanted a mask that I could use as a spot treatment. This mask is easy to apply and actually works if I use it consistently. It works on my sensitive skin too!</p>
+                </div>
             </div>
-        </section>
+        <div class="time-relevance">
+            <p>18 hours ago</p>
+        </div>
+        </div>
+    </div>
     </main>
 </body>
 </html>

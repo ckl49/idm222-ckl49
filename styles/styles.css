@@ -41,7 +41,7 @@ html {
     --rhythm: 1.5rem;
     --transparency-film: rgba(0, 0, 0, 0.4);
     --background-blur: blur(8px);
-    --stroke-light: rgba(0, 0, 0, 0.7);
+    --stroke-light: rgba(0, 0, 0, 0.4);
     --borders: 1px solid var(--borders-color);
 }
 
@@ -82,6 +82,7 @@ h1, h2, h3, h4, h5 {
     font-weight: 500;
     color: var(--foreground-color);
     margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 p, li, ul, summary, details, form {
@@ -112,6 +113,7 @@ h5 {
 
 p {
     font-size: 1rem;
+    font-weight: 300;
 }
 
 header {
@@ -129,7 +131,7 @@ section {
     flex-direction: column;
     align-self: center;
     align-content: center;
-    width: 95vw;
+    width: 90vw;
     height: auto;
     margin-block-start: var(--rhythm);
     margin-block-end: var(--rhythm);
@@ -142,6 +144,7 @@ section {
     font-family: var(--contrast_mono);
 }
 
+/* moreso just a container now */
 .top-menu {
     list-style: none;
     margin: 0;
@@ -154,14 +157,75 @@ section {
     gap: 1rem;
     margin-block-start: 2rem;
     margin-block-end: 1.5rem;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
 
-    li {
+    /* li {
         text-transform: uppercase;
         justify-self: center;
         justify-content: center;
-    }
+    } */
+}
+
+/* setting grid for the ul */
+.ul-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--rhythm);
+    padding: 0;
+    margin: 0;
+    grid-column-start: 2;
+}
+
+/* menu a little confusing, basically turned the ulgrid div into a 3 row, and placing all three li into one single grid, and the gap applies to the li spacing */
+
+.menu-item-1 {
+    display: grid;
+    grid-column-start: 1;
+}
+
+.menu-item-2 {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    width: 100%;
+}
+
+.menu-item-3 {
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.menu-item-4 {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.menu-item-5 {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.menu-item-6 {
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+
+.flex-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+.border-bottom {
+    border-bottom: var(--borders);
+    padding-block-end: var(--wrapper);
 }
 
 .width-ninety-wrapper {
@@ -261,15 +325,43 @@ section {
     border-radius: 1rem;
 }
 
+.carousel-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
+    justify-content: center;
+}
+
 .carousel {
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* white-space: nowrap; */
+    gap: 1rem;
+    flex-wrap: nowrap;
 }
 
-/* .carousel > .product-card {
+.carousel > .product-card {
+    width: 100%;
+    height: auto;
 
-} */
+    a > h2 {
+        font-size: 1.25rem;
+        margin-block-start: 0rem;
+    }
+
+    p {
+        font-size: 0.75rem;
+        margin-block-end: 0.75rem;
+    }
+
+    img {
+        width: 200px;
+        height: 250px;
+    } 
+}
 
 /* shop all page */
 .shop-all {
@@ -286,7 +378,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.75rem;
     background-color: var(--secondary-color);
     border-radius: var(--wrapper);
 }
@@ -304,17 +396,35 @@ section {
     height: 450px;
     object-fit:contain;
 }
+/* 
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    border-radius: var(--wrapper);
+} */
 
-
-.product-card > h2 {
-    font-family: var(--sans_serif);
-    background-color: var(--secondary-color);
-    margin-block-end: 1rem;
-    margin-block-start: 1rem;
+#filter {
+    font-family: sans-serif;
 }
 
-.product-card > h2 > a {
+/* was redundant because i specified even more closely with the next statement */
+/* .product-card > h2 {
+    font-family: var(--sans_serif);
     background-color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-block-end: 1rem;
+    margin-block-start: 1rem;
+} */
+
+.product-card > a > h2 {
+    font-size: 1.5rem;
+    background-color: var(--secondary-color);
+    font-family: var(--sans_serif);
+    background-color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-block-end: 1rem;
+    margin-block-start: 1rem;
 }
 
 .product-card > p {
@@ -341,7 +451,9 @@ section {
 .images-slideshow {
     display: flex;
     flex-direction: row;
-    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;  
     gap: var(--wrapper);
     padding: 1rem;
     border: var(--borders);
@@ -353,6 +465,68 @@ section {
     width: auto;
     height: 100%;
     object-fit: contain;
+}
+
+.product-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    /* display: grid;
+    grid-template-columns: 4fr 1fr; */
+}
+
+.one-three-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: var(--borders);
+    border-radius: var(--wrapper);
+    padding: var(--rhythm);
+    gap: var(--rhythm);
+}
+
+.img-border {
+    padding: var(--wrapper);
+    border: var(--borders);
+    border-radius: var(--wrapper);
+    padding: var(--wrapper);
+    background-color: var(--secondary-color);
+}
+
+.how-to-apply {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rhythm);
+    padding: var(--wrapper);
+    justify-content: center;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+        background-color: var(--secondary-color);
+    }
+
+    /* div {
+        background-color: var(--secondary-color);
+    } */
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-items: end;
+    justify-self: center;
+    padding: var(--wrapper);
+
+    h1 {
+        margin: 0;
+        /* padding: 1rem; */
+        text-align: right;
+        font-weight: 400;
+    }
 }
 
 .product-header {
@@ -373,16 +547,17 @@ section {
     }
 }
 
-.product-title-on-page > h1, h2, p {
+.product-caption-on-page > h1, h2, p {
     margin-block-start: 0;
+    margin-block-end: 0.5rem;
 }
 
-.product-title-on-page > h1 {
+.product-caption-on-page > h1 {
     font-family: var(--display_font);
     margin-block-end: 0.5rem;
 }
 
-.product-title-on-page > h2 {
+.product-caption-on-page > h2 {
     font-family: var(--contrast_mono);
     font-weight: 300;
     font-size: 1.25rem;
@@ -390,7 +565,7 @@ section {
 
 .product-overview-individual {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 5fr 1fr;
 }
 
 .reviews-at-top {
@@ -398,9 +573,10 @@ section {
 }
 
 .stars {
+    max-width: 200px;
     display: flex;
     flex-direction: row;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0;
     /* padding: var(--wrapper) 0 var(--wrapper) var(--wrapper); */
 }
 
@@ -409,10 +585,12 @@ section {
     color: var(--highlight-color-1);
 }
 
-
-
 .number_of_reviews {
     text-align: right;
+    font-size: 14px;
+    color: var(--borders-color);
+    font-family: var(--contrast_mono);
+    text-transform: uppercase;
 }
 
 .product-blurb {
@@ -423,6 +601,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    gap: var(--wrapper);
     padding:0;
     margin-block-start: 0;
 }
@@ -448,8 +627,8 @@ section {
     margin: 0.5rem;
 }
 
-.product-information > .shop-all-button {
-    margin: var(--rhythm) 0 0 0 ;
+.product-information > div > .shop-all-button {
+    margin: var(--wrapper) 0 0 0 ;
     width: 100%;
 }
 
@@ -464,15 +643,25 @@ section {
     padding-inline-end: var(--wrapper);
     padding-block-start: var(--wrapper);
     padding-block-end: 0.25rem;
-}
 
-.beforeafter-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: var(--borders);
-    padding: var(--wrapper);
-    border-radius: var(--wrapper);
-}
+    }
+    
+    .beforeafter-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: var(--borders);
+        padding: 1rem;
+        border-radius: var(--wrapper);
+
+        /* li {
+            list-style: decimal-leading-zero;
+            padding: 0;
+        }
+
+        ul {
+            padding-inline-start: 1.5rem;
+        } */
+        }
 
 
 .beforeafter-section img {
@@ -503,8 +692,76 @@ section {
     align-content: center;
     align-self: center;
     align-items: center;
+    padding: 1rem;
+
+    ul {
+        line-height: 2rem;
+        padding-inline-start: 1rem;
+    }
+
+    li {
+        padding: var(--wrapper);
+        font-size: 1.25rem;
+    }
 }
 
+/* video section */
+
+.video-key-ingredients-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tutorial {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: auto;
+    padding: 1rem;
+    border: var(--borders);
+    border-radius: var(--wrapper);
+    background: var(--highlight-color-1);
+    object-fit: contain;
+    /* justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-content: center;
+    align-self: center;
+    align-items: center; */
+}
+
+.key-ingredients-part {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-inline-start: 1rem;
+    justify-content: center;
+
+    li {
+        list-style:decimal-leading-zero;
+        line-height: 2rem;
+    }
+
+    ul {
+        margin-block-end: var(--wrapper);
+        margin-block-start: var(--wrapper);
+
+    }
+
+    h3 {
+        margin-block-end: var(--wrapper);
+    }
+}
+
+/* getting rid of the scroll bar on the horizontal */
+/* .scrolldiv::-webkit-scrollbar { 
+    display: none;
+} */
+/* 
+.scrolldiv {
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+} */
 
 /* faq section making bars */
 
@@ -518,6 +775,7 @@ section {
 .faq-section > summary {
     list-style: none;
     background-color: var(--secondary-color);
+    transition: details 1s ease-in-out;
 
 }
 
@@ -525,7 +783,6 @@ section {
 .faq-section > h3 {
     margin-block-start: 0.5rem;
     background-color: var(--secondary-color);
-
 }
 
 .faq-section > details {
@@ -534,8 +791,91 @@ section {
     padding: 0.5rem;
     background-color: var(--background-color);
     border-radius: 0.5rem;
-    border: var(--borders)
+    border: var(--borders);
 }
+
+/* reviews at the bottom */
+
+.review-overview {
+    padding: var(--wrapper);
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    gap: var(--wrapper);
+    justify-content: right;
+}
+
+.stars-numbers {
+    display: grid;
+    grid-template-rows: 1fr 1fr; 
+    align-items: baseline;
+    /* width: 20vw; */
+
+    .stars {
+        margin-block-end: 0;
+    }
+}
+
+.number_of_reviews > p {
+    margin: 0;
+}
+
+.number-of-stars > h1 {
+    font-size: 4rem;
+}
+
+.no-margin {
+    margin: 0;
+    align-items: center;
+}
+
+.reviews-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.review-overview {
+    display: flex;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-rows: 1fr 1fr; */
+}
+
+.review-single {
+    margin-block-end: var(--rhythm);
+    padding: 1rem;
+    border: var(--borders);
+    border-radius: var(--wrapper);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: var(--rhythm);
+}
+
+.review-text {
+    margin-block-start: var(--wrapper);
+}
+
+.time-relevance {
+
+    p {
+        margin-block-end: 0;
+        color: var(--borders-color);
+        font-family: var(--contrast_mono);
+    }
+}
+
+
+.review-star-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* .number_of_stars {
+} */
 
 /* @media screen and (width >= 1100) {
     
