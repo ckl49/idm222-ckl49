@@ -48,6 +48,7 @@ html {
 * {
     box-sizing: border-box;
     background-color: var(--background-color);
+    scroll-behavior: smooth;
 }
 
 img {
@@ -116,10 +117,61 @@ p {
     font-weight: 300;
 }
 
-header {
-    display: flex;
-    width: 100vw;
-    justify-self: left;
+b {
+    font-weight: 500;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-block-end: 3rem;
+
+    /* grid-template-areas: 'form . ul ul'; */
+    gap: var(--rhythm);
+    /* flex-direction: row;
+    justify-content: space-between; */
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--wrapper);
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--borders-color);
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: var(--borders-color);
+    }
+
+    form {
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: auto;
+        width: 40vw;
+        gap: var(--wrapper);
+
+        label {
+            height: fit-content;
+        }
+
+        h4 {
+            margin: 0;
+        }
+
+        .shop-all-button {
+            height: 2rem;
+            width: 100%;
+            margin: 0;
+            padding: 4px;
+        }
+    }
 }
 
 /* br {
@@ -144,83 +196,86 @@ section {
     font-family: var(--contrast_mono);
 }
 
-/* moreso just a container now */
+/* menu below */
+
+header {
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    margin-block-start: var(--rhythm);
+    margin-block-end: var(--rhythm);
+}
+
+
 .top-menu {
-    list-style: none;
     margin: 0;
     padding: 0;
+    width: 90vw;
+    list-style: none;
     display: grid;
-    /* flex-direction: row; */
-    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
     justify-content: center;
-    justify-items: space-between;
-    gap: 1rem;
-    margin-block-start: 2rem;
-    margin-block-end: 1.5rem;
-    grid-template-columns: repeat(3, 1fr);
+    justify-self: center;
+    justify-items: center;
     align-items: center;
 
-    /* li {
+    li {
+        display: grid;
         text-transform: uppercase;
-        justify-self: center;
-        justify-content: center;
+        font-weight: 500;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--foreground-color);
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* 
+    don't know why these don't work
+    a:active {
+        color: var(--button-color);
+        text-decoration: underline;
+    }
+
+    a:visited {
+        color: var(--borders-color);
+        text-decoration: underline;
+
     } */
 }
 
-/* setting grid for the ul */
-.ul-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.icons-side {
+    display: flex;
+    width: 300px;
+    justify-content: right;
+    flex-direction: row;
     gap: var(--rhythm);
-    padding: 0;
-    margin: 0;
-    grid-column-start: 2;
+    grid-template-columns: repeat(1fr, 3);
+    grid-column-start: 7;
 }
 
-/* menu a little confusing, basically turned the ulgrid div into a 3 row, and placing all three li into one single grid, and the gap applies to the li spacing */
-
-.menu-item-1 {
-    display: grid;
+.text-side {
+    width: 300px;   
+    display: flex;
+    flex-direction: row;
+    gap: var(--rhythm);
     grid-column-start: 1;
 }
 
-.menu-item-2 {
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 2;
-    width: 100%;
+.logo {
+    grid-column-start: 4;
 }
 
-.menu-item-3 {
-    display: grid;
-    grid-column-start: 3;
-    grid-column-end: 3;
-}
+.logo-footer {
+    width: 150px;
+    height: auto;
+    justify-self: left;
 
-.menu-item-4 {
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 1;
-}
-
-.menu-item-5 {
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
-
-.menu-item-6 {
-    display: grid;
-    grid-column-start: 3;
-    grid-column-end: 3;
-}
-
-
-.flex-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0;
-    padding: 0;
 }
 
 .border-bottom {
@@ -238,6 +293,36 @@ section {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-self: left;
+    margin-block-end: 0;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: var(--wrapper);
+    }
+
+    li {
+        font-family: var(--contrast_mono);
+    }
+
+    a {
+        color: var(--borders-color);
+        font-family: var(--contrast_mono);
+
+    }
+    
+    a:hover {
+        color: var(--foreground-color)
+    }
 }
 
  /* container meaning like the images behind the text on home page */
@@ -331,6 +416,8 @@ section {
     height: auto;
     overflow: hidden;
     justify-content: center;
+    margin-block-start: 3rem;
+    margin-block-end: 3rem;
 }
 
 .carousel {
@@ -446,6 +533,7 @@ section {
     border-radius: 0.5rem;
     border: var(--borders);
     padding: 1rem;
+    margin-block-start: var(--wrapper);
 }
 
 .images-slideshow {
@@ -455,7 +543,7 @@ section {
     overflow-y: hidden;
     white-space: nowrap;  
     gap: var(--wrapper);
-    padding: 1rem;
+    padding: var(--wrapper);
     border: var(--borders);
     border-radius: var(--wrapper);
     background-color: var(--secondary-color);
@@ -463,7 +551,7 @@ section {
 
 .images-slideshow > img {
     width: auto;
-    height: 100%;
+    height: 60vh;
     object-fit: contain;
 }
 
@@ -472,7 +560,7 @@ section {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
 
     /* display: grid;
     grid-template-columns: 4fr 1fr; */
@@ -485,9 +573,12 @@ section {
     border-radius: var(--wrapper);
     padding: var(--rhythm);
     gap: var(--rhythm);
+    justify-content: center;
+    align-items: center;
 }
 
 .img-border {
+    height: fit-content;
     padding: var(--wrapper);
     border: var(--borders);
     border-radius: var(--wrapper);
@@ -501,6 +592,11 @@ section {
     gap: var(--rhythm);
     padding: var(--wrapper);
     justify-content: center;
+
+    p {
+        color: var(--foreground-color);
+        filter: opacity(80%);
+    }
 
     img {
         width: 100%;
@@ -518,8 +614,9 @@ section {
     display: flex;
     flex-direction: row;
     justify-items: end;
-    justify-self: center;
-    padding: var(--wrapper);
+    justify-self: start;
+    padding:0 var(--wrapper) var(--wrapper) var(--wrapper);
+
 
     h1 {
         margin: 0;
@@ -533,13 +630,15 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--rhythm);
+    height: fit-content ;
 }
 
 .product-information {
     display: flex;
     flex-direction: column;
     gap: var(--rhythm);
-    /* align-content: space-between; */
+    height: 100%;
+    justify-content: space-between;
     /* padding: var(--wrapper) var(--wrapper) var(--wrapper) 0; */
 
     h1 {
@@ -575,8 +674,9 @@ section {
 .stars {
     max-width: 200px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     margin-bottom: 0;
+    height: fit-content;
     /* padding: var(--wrapper) 0 var(--wrapper) var(--wrapper); */
 }
 
@@ -591,6 +691,12 @@ section {
     color: var(--borders-color);
     font-family: var(--contrast_mono);
     text-transform: uppercase;
+    text-decoration: underline;
+
+    a {
+        text-decoration: underline;
+        color: var(--borders-color)
+    }
 }
 
 .product-blurb {
@@ -710,6 +816,10 @@ section {
 .video-key-ingredients-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: var(--wrapper);
+    border: var(--borders);
+    border-radius: var(--wrapper);
+    
 }
 
 .tutorial {
@@ -720,14 +830,8 @@ section {
     padding: 1rem;
     border: var(--borders);
     border-radius: var(--wrapper);
-    background: var(--highlight-color-1);
+    background: var(--secondary-color);
     object-fit: contain;
-    /* justify-content: center;
-    justify-self: center;
-    justify-items: center;
-    align-content: center;
-    align-self: center;
-    align-items: center; */
 }
 
 .key-ingredients-part {
@@ -736,6 +840,7 @@ section {
     padding: 1rem;
     margin-inline-start: 1rem;
     justify-content: center;
+
 
     li {
         list-style:decimal-leading-zero;
@@ -753,18 +858,6 @@ section {
     }
 }
 
-/* getting rid of the scroll bar on the horizontal */
-/* .scrolldiv::-webkit-scrollbar { 
-    display: none;
-} */
-/* 
-.scrolldiv {
-    -ms-overflow-style: none;
-    scrollbar-width: none;  
-} */
-
-/* faq section making bars */
-
 .faq-section {
     padding: var(--rhythm);
     border: var(--borders);
@@ -779,18 +872,18 @@ section {
 
 }
 
-
 .faq-section > h3 {
-    margin-block-start: 0.5rem;
+    margin-block-start: var(--wrapper);
+    margin-block-end: var(--wrapper);
     background-color: var(--secondary-color);
 }
 
 .faq-section > details {
     margin-block-end: 1rem;
-    margin-block-start: 0.5rem;
-    padding: 0.5rem;
+    margin-block-start: var(--wrapper);
+    padding: var(--wrapper);
     background-color: var(--background-color);
-    border-radius: 0.5rem;
+    border-radius: var(--wrapper);
     border: var(--borders);
 }
 
@@ -805,12 +898,15 @@ section {
     flex-direction: row;
     gap: var(--wrapper);
     justify-content: right;
+    align-items: center;
 }
 
 .stars-numbers {
     display: grid;
     grid-template-rows: 1fr 1fr; 
     align-items: baseline;
+    height: fit-content;
+    justify-content: center;
     /* width: 20vw; */
 
     .stars {
@@ -835,6 +931,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .review-overview {
@@ -852,6 +949,11 @@ section {
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: var(--rhythm);
+
+    .stars {
+        align-items: start;
+        width: fit-content;
+    }
 }
 
 .review-text {
@@ -859,7 +961,6 @@ section {
 }
 
 .time-relevance {
-
     p {
         margin-block-end: 0;
         color: var(--borders-color);
@@ -867,18 +968,329 @@ section {
     }
 }
 
-
 .review-star-information {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* .number_of_stars {
-} */
+/* for the footer */
 
-/* @media screen and (width >= 1100) {
+.list-explore {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 3;
+}
+
+.list-follow-us {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 4;
+}
+
+.text-box {
+    border-radius: 2px;
+    border: var(--borders);
+    background-color: var(--secondary-color);
+    padding: 0 var(--wrapper);
+    box-shadow: inset 3px 3px 6px 4px (0,0,0, 0.9);
+}
+
+
+@media (max-width: 979px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
     
-} */
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.75rem;
+    }
+    
+    h4 {
+        font-size: 1.5rem;
+        margin-block-end: 0.5rem;
+    }
+    
+    h5 {
+        font-size: 1.25rem;
+    }
 
-/* make media queries for small medium large screens */ 
+    .logo {
+        grid-column-start: 3;
+        grid-column-end: 6 ;
+    }
+
+    .top-menu {
+        margin: 0;
+        padding: 0;
+        width: 90vw;
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        justify-self: center;
+        justify-items: center;
+        align-items: center;
+
+        li {
+            display: grid;
+            text-transform: uppercase;
+            font-weight: 400;
+            align-items: center;
+        }
+    }
+
+    .icons-side {
+        width: 200px;
+    }
+    
+    .text-side {
+        width: 200px;  
+    }
+
+    .product-header {
+        display: flex;
+        flex-direction: column;
+        gap: var(--wrapper);
+    }
+
+    .beforeafter-section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--wrapper);
+
+        div {
+            align-self: start;
+            padding-block-end: 0;
+        }
+    }
+
+    .one-three-grid {
+        display: flex;
+        flex-direction: column;
+        padding: var(--wrapper);
+
+        img {
+            width: 50vw;
+            height: auto;
+        }
+    }
+
+    .beforeafter-section {
+        display: flex;
+        justify-content: left;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    .clinical-proven-blurb {
+        order: 2;
+    }
+
+    .before-after {
+        order: 1;
+        width: 100%;
+    }
+
+    .video-key-ingredients-section {
+        display: flex;
+        flex-direction: column;
+        
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        div {
+            align-self: start;
+            padding-block-end: 0;
+        }
+    }
+
+    .key-ingredients-part {
+        margin: 0;
+        order: 2;
+    }
+
+    .reviews-heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .items-form {
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+
+    .list-explore {
+        grid-row-start: 2;
+        grid-column: 1 / 2;
+    }
+
+    .list-follow-us{
+        grid-row-start: 2;
+        grid-column: 3 / 4;
+    }
+
+    .logo-in-footer-div {
+        grid-row-start: 4;
+        grid-column-start: 1;
+
+    }
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        justify-items: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    h4 {
+        font-size: 1.35rem;
+        margin-block-end: 0.5rem;
+    }
+    
+    h5 {
+        font-size: 1.15rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    section {
+        width: 95vw;
+        justify-content: center;
+    }
+
+
+    /* zeroed out the menu so that the margins wouldn't be messed up */
+    .top-menu {
+        width: 0;
+    }
+
+    .text-side {
+        width: 0;
+        display: none;
+    }
+
+    .icons-side {
+        width: 0;
+        display: none;
+    }
+
+    .breadcrumb {
+        width: 95vw;
+        font-size: 0.8rem;
+        text-wrap: pretty;
+    }
+
+    .images-slideshow {
+        img {
+            height: 50vh;
+            width: auto;
+        }
+    }
+
+    .product-header {
+        width: 95vw;
+    }
+
+    .product-title {
+        align-items: start;
+    }
+
+    .price {
+        padding-block-start: 0;
+    }
+
+
+    .beforeafter-section {
+        display: flex;
+        justify-content: left;
+        padding: var(--wrapper);
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .before-after {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .one-three-grid {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .video-key-ingredients-section {
+        gap: var(--rhythm);
+
+        video {
+            padding: var(--wrapper);
+        }
+
+        div {
+            align-self: start;
+            padding: 0;
+        }
+    }
+
+    .faq-section {
+        padding: 1rem
+    }
+
+    .reviews-heading {
+        flex-direction: column;
+
+        h2 {
+            margin:0;
+        }
+    }
+
+    .rating {
+        justify-content: left;
+        padding-left: 0;
+    }
+
+    .review-single {
+        display: flex;
+        flex-direction: column;
+    }
+}
