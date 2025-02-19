@@ -55,7 +55,6 @@ img {
     height: auto;
     width: 100%;
     border-radius: 1rem;
-    box-shadow: (0 4 8 #000000 0.15);
     display: block;
     align-self: center;
     justify-self: center;
@@ -84,7 +83,7 @@ h1, h2, h3, h4, h5 {
     font-weight: 500;
     color: var(--foreground-color);
     margin-block-start: 0;
-    margin-block-end: 0;
+    margin-block-end: var(--wrapper);
 }
 
 p, li, ul, summary, details, form {
@@ -94,7 +93,6 @@ p, li, ul, summary, details, form {
 
 h1 {
     font-size: 3rem;
-    margin-block-end: var(--wrapper);
 }
 
 h2 {
@@ -107,7 +105,6 @@ h3 {
 
 h4 {
     font-size: 1.5rem;
-    margin-block-end: 0.5rem;
 }
 
 h5 {
@@ -176,10 +173,6 @@ footer {
     }
 }
 
-/* br {
-    margin: var(--wrapper);
-} */
-
 section {
     display: flex;
     flex-direction: column;
@@ -192,13 +185,18 @@ section {
 }
 
 figure {
-    height: 80vh;
-    width: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 figure > img {
+    width: 30vw;
     height: auto;
-    width: 100%;
+    object-fit: cover;
+    display: flex;
 }
 
 /* classes under here */
@@ -233,7 +231,7 @@ header {
     li {
         display: grid;
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 400;
         align-items: center;
     }
 
@@ -394,6 +392,16 @@ header {
     border-color: #E5E9EC;
     border: 1px;
     box-shadow: (0 4 8 #000000 0.15);
+}
+
+.shop-all-button:hover {
+    background-color: var(--highlight-color-4);
+    color: var(--button-color);
+    /* border-color: var(--button-color);
+    border: var(--borders);
+    border-radius: var(--wrapper); */
+    /* margin: 0; */
+    cursor: pointer;
 }
 
 .category-section {
@@ -760,6 +768,7 @@ header {
     padding-inline-end: var(--wrapper);
     padding-block-start: var(--wrapper);
     padding-block-end: 0.25rem;
+    height: fit-content;
 
     }
     
@@ -769,6 +778,8 @@ header {
         border: var(--borders);
         padding: 1rem;
         border-radius: var(--wrapper);
+        height: fit-content;
+
 
         /* li {
             list-style: decimal-leading-zero;
@@ -781,10 +792,12 @@ header {
         }
 
 
-.beforeafter-section img {
+/* .beforeafter-section img {
     width: 30vw;
     height: auto;
-}
+    display: flex;
+    justify-content: center;
+} */
 
 .beforeafter-section figure {
     margin: var(--wrapper);
@@ -1012,6 +1025,7 @@ header {
 .about-header {
     display: flex;
     flex-direction: column;
+    margin-block-start: 0;
 
     h1 {
         font-weight: 600;
@@ -1103,6 +1117,58 @@ header {
         height: 100%;
         width: 100%;
     }
+}
+
+
+/* log in page */
+
+.log-in-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 5vh;
+    margin-block-end: 10vh;
+
+    h1 {
+        margin-block-end: var(--wrapper);
+    }
+
+    p {
+        justify-self: center;
+        margin-block-end: 2rem;
+        margin-block-start: var(--wrapper);
+    }
+
+    p:first-child {
+        font-size: 1.5rem;
+        margin-block-start: 0;
+    }
+
+    .shop-all-button {
+        display: flex;
+        justify-content: center;
+    }
+
+    input {
+        padding: var(--wrapper);
+        border-radius: var(--wrapper);
+        border: var(--borders);
+        background-color: var(--secondary-color);
+        width: 30vw;
+    }
+}
+
+.label-above-input {
+    display: flex;
+    flex-direction: column;
+    color: var(--borders-color);
+}
+
+
+.underline {
+    text-decoration: underline;
+    color: var(--borders-color);
 }
 
 /* media queries */
@@ -1287,7 +1353,7 @@ header {
     
     h4 {
         font-size: 1.35rem;
-        margin-block-end: 0.5rem;
+        margin-block-end: var(--wrapper);
     }
     
     h5 {
