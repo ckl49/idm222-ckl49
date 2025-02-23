@@ -38,7 +38,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 24 24"><path fill="#000" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg></a>
                     </li>
                     <li class="menu-item-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 24      24"><path fill="#000" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"/></svg>
+                        <a href="shoppingcart.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 24      24"><path fill="#000" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"/></svg>
+                        </a>
                     </li>
                 </div>
             </ul>
@@ -51,6 +53,7 @@
                 <li><a href="shopall.html">Shop All</a></li>
                 <li><a href="shoppingcart.html">Shopping Cart</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="account.html">Account</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <label for="toggle-checkbox">
                     <li class="return">Return</li>
@@ -60,11 +63,11 @@
     </header>
 <body>
     <main>
-        <div class="hero-home-page">
-            <img class="hero-banner"
+        <div class="hero-home-page first-banner">
+            <!-- <img class="hero-banner"
                 src="graphics/home/banner_image_top.webp"
                 alt="banner image welcome to topicals"
-            >
+            > -->
             <div class="hero-text">
                 <h1>Welcome to Topicals.</h1>
                 <p class="mono">Shop Topicals for all your skincare needs. We believe you deserve clear skin.</p>
@@ -165,135 +168,38 @@
             </div>
         </section>
 
-        <div class="hero-home-page">
-            <img class="hero-banner"
-                src="graphics/home/banner_image3.avif"
-                alt="banner image welcome to topicals"
-            >
-            <div class="hero-text">
-                <h1>Welcome to Topicals.</h1>
-                <p class="mono">Shop Topicals for all your skincare needs. We believe you deserve clear skin.</p>
-                <button class="shop-all-button">Shop All</button>
+        <section>
+            <div class="hero-home-page second-banner">
+                <div class="hero-text">
+                    <h1>Checkout our new line</h1>
+                    <p class="mono">Clearly Acne products to clear out your conscience and build self confidence</p>
+                    <button class="shop-all-button">Check it out</button>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section>
+            <div class="category-section">
+                <div class="category-home-page category-discoloration">
+                    <a href="shopall.html">
+                        <div class="category-text">
+                            <h2>Discoloration</h2>
+                            <p class="mono">Press to see products tailored to tackle discoloration.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-home-page category-texture">
+                    <a href="shopall.html">
+                        <div class="category-text">
+                            <h2>Textured Skin</h2>
+                            <p class="mono">Click to learn about products tailored to revitalize textured skin.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
-    <!-- <main>
-        <div class="container">
-            <img class="home-page-banner"
-                src="graphics/home/banner_image_top.webp"
-                alt="banner image welcome to topicals"
-                width="700"
-                height=""
-            >
-            <div class="bottom-left-text-container">
-                <h1>Welcome to Topicals.</h1>
-                <p class="mono">Shop topicals and all our products for your skincare needs.</p>
-                <a href="shopall.html"><button class="shop-all-button">Shop All</button></a>
-            </div>
-        </div>
-        <section>
-            <h2>Best Sellers</h2>
-                <div class="carousel scrolldiv">
-                    <div class="product-card">
-                        <img src="graphics/clearly_mask/clearly_mask_product1.webp" alt="">
-                        <div>
-                            <a href="clearly_breakout_mask.html">
-                                <h2>Clearly Breakout Mask</h2>
-                            </a>
-                            <p>Clarifying and Calming Mask</p>
-                        </div>
-                        <button class="shop-all-button">Add to Bag - 26$</button>
-                    </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="graphics/slick_salve_acai/slick_salve_acai1.webp" alt="">
-                            <a href="slick_salve_acai.html">
-                                <h2>Slick Salve Balm - Acai</h2>
-                            </a>
-                            <p>Tinted Balm for Soothing + Hydration</p>
-                        </div>
-                        <button class="shop-all-button">Add to Bag - $16</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="graphics/butter_moist/butter_moist1.webp" alt="">
-                        <a href="butter_moisturizer.html">
-                            <h2>Like Butter Moisturizer</h2>
-                        </a>
-                        <p>For Dry, Eczema-Prone Skin</p>
-                        <button class="shop-all-button">Add to Bag - 34$</button>
-                    </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="graphics/slick_salve_mint/slick_salve_mint1.webp" alt="">
-                            <a href="slick_salve_mint.html">
-                                <h2>Slick Salve Lip Balm - Mint</h2>
-                            </a>
-                            <p>Glossy Balm for Soothing + Hydration</p>
-                        </div>
-                        <button class="shop-all-button">Add to Bag - $16</button>
-                    </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="graphics/slather_serum/slather_serum1.webp" alt="">
-                            <a href="exfoliating_body_serum.html">
-                                <h2>Slather Exfoliating Body Serum</h2>
-                            </a>
-                            <p>With Retinol and AHAs</p>
-                        </div>
-                        <button class="shop-all-button">Add to Bag - 30$</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="graphics/faded_serum/faded_serum1.webp" alt="">
-                        <a href="faded_serum.html">
-                            <h2>Faded Serum</h2>
-                        </a>
-                        <p>For Dark Spots and Discoloration</p>
-                        <button class="shop-all-button">Add to Bag - 38$</button>
-                    </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="graphics/scar_primer/scar_primer1.webp" alt="">
-                            <a href="scar-primer.html">
-                                <h2>Sealed Scar Filling Primer</h2>
-                            </a>
-                            <p>For Acne Scars and Large Pores</p>
-                        </div>
-                        <button class="shop-all-button">Add to Bag - 38$</button>
-                    </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="graphics/faded_mist/faded_mist1.webp" alt="">
-                            <a href="faded_mist.html">
-                                <h2>Faded Mist</h2>
-                            </a>
-                            <p>For Dark Spots and Discoloration</p>
-                        </div>
-                        <button class="shop-all-button">Add to Bag - 32$</button>
-                    </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="graphics/butter_mist/butter_mist1.webp" alt="">
-                            <a href="butter_mist.html">
-                                <h2>Like Butter Mist</h2>
-                            </a>
-                            <p>Hydration for Dry Skin</p>
-                        </div>
-                        <button class="shop-all-button">Add to Bag - $30</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="category-section">
-            <div class="container">
-                <img class="category-img" src="graphics/home/discoloration.webp" alt="products for discoloration">
-                <h2>Products for Discoloration</h2>
-            </div>
-            <div class="container">
-                <img class="category-img" src="graphics/home/textured_skiin.webp" alt="products for textured Skin">
-                <h2>Products for Textured Skin</h2>
-            </div>
-        </section>
-    </main> -->
 
 
     <!-- footer -->
