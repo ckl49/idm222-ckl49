@@ -75,6 +75,7 @@ main {
     justify-self: center;
     justify-content: center;
     margin-block-start: 0;
+    width: 90vw;
 }
 
 
@@ -118,6 +119,16 @@ p {
 
 b {
     font-weight: 500;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--foreground-color);
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
@@ -235,15 +246,6 @@ header {
         align-items: center;
     }
 
-    a {
-        text-decoration: none;
-        color: var(--foreground-color);
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
 /* 
     don't know why these don't work
     a:active {
@@ -256,6 +258,18 @@ header {
         text-decoration: underline;
 
     } */
+}
+
+.overlay-nav-ul{
+    display: none;
+}
+
+#toggle-checkbox {
+    display: none;
+}
+
+.hamburger {
+    display: none;
 }
 
 .icons-side {
@@ -277,7 +291,8 @@ header {
 }
 
 .logo {
-    grid-column-start: 4;
+    grid-column-start: 3;
+    grid-column-end: 6;
 }
 
 .logo-footer {
@@ -545,6 +560,8 @@ header {
     flex-direction: row;
     justify-content: space-between;
 }
+
+
 
 /* product pages */
 
@@ -889,26 +906,29 @@ header {
     background-color: var(--secondary-color);
 }
 
-.faq-section > summary {
-    list-style: none;
-    background-color: var(--secondary-color);
-    transition: details 1s ease-in-out;
 
-}
-
-.faq-section > h3 {
+.faq-section h3 {
     margin-block-start: var(--wrapper);
     margin-block-end: var(--wrapper);
     background-color: var(--secondary-color);
+    }
+    
+.faq-section summary {
+    list-style: none;
+    background-color: var(--secondary-color);
+    transition: details 1s ease-in-out;
+    padding-top: var(--wrapper);
+    width: 75ch;
 }
 
-.faq-section > details {
+.faq-section details {
     margin-block-end: 1rem;
     margin-block-start: var(--wrapper);
     padding: var(--wrapper);
     background-color: var(--background-color);
     border-radius: var(--wrapper);
     border: var(--borders);
+    width: 75ch;
 }
 
 /* reviews at the bottom */
@@ -1017,8 +1037,9 @@ header {
     border: var(--borders);
     background-color: var(--secondary-color);
     padding: 0 var(--wrapper);
-    box-shadow: inset 3px 3px 6px 4px (0,0,0, 0.9);
+    box-shadow: none 3px 3px 6px 4px rgba(0, 0, 0, 0.9);
 }
+
 
 /* about page */
 
@@ -1099,7 +1120,7 @@ header {
 
     .faq-section {
         padding: 1rem;
-        margin-inline-end: var(--wrapper);
+        /* margin-inline-end: var(--wrapper); */
 
         h4 {
             background-color: var(--secondary-color);
@@ -1159,6 +1180,17 @@ header {
     }
 }
 
+.log-in-box {
+    padding: 2.5rem var(--rhythm);
+    border: var(--borders);
+    border-radius: var(--wrapper);
+    border-color: var(--borders-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .label-above-input {
     display: flex;
     flex-direction: column;
@@ -1196,9 +1228,21 @@ header {
         font-size: 1.25rem;
     }
 
+    p div {
+        width: 100%;
+        height: auto;
+    }
+
     .logo {
         grid-column-start: 3;
         grid-column-end: 6 ;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90vw;
     }
 
     .top-menu {
@@ -1219,6 +1263,10 @@ header {
             font-weight: 400;
             align-items: center;
         }
+    }
+
+    .text-side {
+        gap: 10px;
     }
 
     .icons-side {
@@ -1327,6 +1375,42 @@ header {
         grid-column-start: 1;
 
     }
+
+    /* about page */
+
+    .about-advisory {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 90vw;
+    }
+
+    .faq-section details summary {
+        width: 100%;
+    }
+
+    .about-mental-health {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: auto;
+    }
+
+    /* footer elements */
+    .items-form {
+        display: grid;
+        grid-column: 1 / span 4;
+        width: 100%;
+    }
+
+    .overlay-nav-ul{
+        display: none;
+    }
+
+    #toggle-checkbox {
+        display: none;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 700px) {
@@ -1365,25 +1449,102 @@ header {
         line-height: 1.5rem;
     }
 
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+
     section {
         width: 95vw;
         justify-content: center;
     }
 
-
     /* zeroed out the menu so that the margins wouldn't be messed up */
     .top-menu {
-        width: 0;
+        display: grid;
+        grid: repeat(1fr, 7);
     }
 
     .text-side {
-        width: 0;
         display: none;
     }
 
     .icons-side {
-        width: 0;
+        gap: var(--wrapper);
+        width: 10vw;
+
+        .menu-item-4 {
+            display: none;
+        }
+    }
+
+    #toggle-checkbox {
         display: none;
+    }
+    
+    /* Overlay menu styles */
+    .overlay-nav-menu {
+        position: fixed;
+        background: var(--background-color);
+        width: 100%;
+        height: 100%;
+        top: -100%; /* Start hidden above the viewport */
+        left: 0;
+        transition: top 0.3s ease; /* Smooth slide-down transition */
+        z-index: 1000; /* Ensure it’s on top of other content */
+    }
+    
+    /* List styles */
+    .overlay-nav-ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: var(--rhythm);
+        height: 100%; /* Ensure the list takes full height */
+    }
+    .return {
+        color: var(--borders-color);
+        font-family: monospace;
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-block-start: 3rem;
+    }
+
+    /* List item styles */
+    .overlay-nav-ul li {
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    /* Show the overlay when the checkbox is checked */
+    #toggle-checkbox:checked + .overlay-nav-menu {
+        top: 0; /* Slide into view */
+    }
+
+
+    /* row needed to push the hamburger and search bar into a row in mobile menu so both sides even*/
+    .row {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+    }
+
+    .hamburger {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width: 10vw;
+        justify-content: left;
+    }
+
+    .logo {
+        grid-column-start: 3;
+        grid-column-end: 6;
     }
 
     .breadcrumb {
@@ -1470,3 +1631,8 @@ header {
         flex-direction: column;
     }
 }
+
+
+
+
+
