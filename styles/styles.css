@@ -131,6 +131,11 @@ a:hover {
     text-decoration: underline;
 }
 
+picture {
+    width: 100%;
+    height: auto;
+}
+
 footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -370,14 +375,6 @@ a + div:hover {
 
 /* below is new home page styling */
 
-.first-banner {
-    background-image: url(../graphics/home/banner_image_top.webp);
-}
-
-.second-banner {
-    background-image: url(../graphics/home/banner5.webp);
-}
-
 .hero-home-page + .second-banner {
     color: var(--foreground-color);
 
@@ -422,12 +419,26 @@ a + div:hover {
     }
 }
 
+/* background images on index called in the media queries to change the sizing later for responsiveness and image optimization
+
+did this because it was the way thata i decided to overlay text on images rather than having image in html
+
+*/
+
 .category-discoloration {
-    background-image: url(../graphics/home/discoloration.webp);
+    background-image: url(../graphics/home/discoloration.jpg);
 }
 
 .category-texture {
-    background-image: url(../graphics/home/textured_skiin.webp);
+    background-image: url(../graphics/home/textured_skin.jpg);
+}
+
+.first-banner {
+    background-image: url(../graphics/home/banner_image_top.jpg);
+}
+
+.second-banner {
+    background-image: url(../graphics/home/banner5.jpg);
 }
 
 .category-section {
@@ -628,7 +639,7 @@ a + div:hover {
     justify-self: center;
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: auto;
-    column-gap: 4rem;
+    column-gap: 2rem;
     row-gap: 2rem;
 }
 
@@ -640,10 +651,16 @@ a + div:hover {
     background-color: var(--secondary-color);
     border-radius: var(--wrapper);
     width: 100%;
-    height: 100%;
+    height: auto;
+    gap: 1rem;
 
     h2, div, p {
         background-color: var(--secondary-color);
+    }
+
+    h2 {
+        font-size: var(--rhythm);
+        margin-block-start: 0;
     }
 }
 
@@ -655,10 +672,25 @@ a + div:hover {
     justify-items: baseline;
 }
 
-.product-card > img {
+.product-card img {
     width: 100%;
-    height: 450px;
-    object-fit:contain;
+    height: auto;
+    display: flex;
+    object-fit: cover;
+    align-content: center;
+    justify-content: center;
+    border-radius: var(--wrapper);
+
+    margin-block-end: var(--wrapper);
+}
+
+.product-img-and-text {
+
+    picture {
+    border-radius: var(--wrapper);
+    margin-block-end: var(--wrapper);
+    }
+
 }
 
 
@@ -681,7 +713,7 @@ a + div:hover {
     margin-block-start: 1rem;
 } */
 
-.product-card > a > h2 {
+/* .product-card > a > h2 {
     font-size: 1.5rem;
     background-color: var(--secondary-color);
     font-family: var(--sans_serif);
@@ -689,14 +721,14 @@ a + div:hover {
     font-size: 1.5rem;
     margin-block-end: 1rem;
     margin-block-start: 1rem;
-}
-
+} */
+/* 
 .product-card > p {
     font-family: var(--contrast_mono);
     background-color: var(--secondary-color);
     margin-block-end: 2rem;
     margin-block-start: 0;
-}
+} */
 
 .shop-all-header {
     display: flex;
@@ -718,26 +750,41 @@ a + div:hover {
     border: var(--borders);
     padding: 1rem;
     margin-block-start: var(--wrapper);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--rhythm);
 }
 
 .images-slideshow {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;  
-    gap: var(--wrapper);
+    display: flex; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; /* Enables smooth snapping */
+    height: 80vh; /* Makes slideshow take full viewport height */
+    width: auto;
     padding: var(--wrapper);
     border: var(--borders);
     border-radius: var(--wrapper);
     background-color: var(--secondary-color);
-}
-
-.images-slideshow > img {
-    width: 100%;
-    height: 80vh;
+    gap: 4px;
+    overflow-y: hidden;
+  }
+  
+  .images-slideshow picture {
+    flex: 0 0 auto;
+    scroll-snap-align: start; /* Snaps images when scrolling */
+    border-radius: var(--wrapper);
     object-fit: cover;
-}
+    width: auto;
+    height: 100%;
+  }
+  
+  .images-slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image fills the area without distortion */
+    border-radius: var(--wrapper);
+  }
+
 
 .product-title {
     display: flex;
@@ -749,6 +796,7 @@ a + div:hover {
     /* display: grid;
     grid-template-columns: 4fr 1fr; */
 }
+
 
 .one-three-grid {
     display: grid;
@@ -810,13 +858,6 @@ a + div:hover {
     }
 }
 
-.product-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--rhythm);
-    height: fit-content ;
-}
-
 .product-information {
     display: flex;
     flex-direction: column;
@@ -845,6 +886,11 @@ a + div:hover {
     font-weight: 300;
     font-size: 1.25rem;
 }
+
+.product-caption-on-page p {
+    color: var(--borders-color);
+}
+
 
 .product-overview-individual {
     display: grid;
@@ -885,6 +931,10 @@ a + div:hover {
 
 .product-blurb {
     grid-column: 1 / 2;
+
+    p {
+        font-weight: 200;
+    }
 }
 
 .product-highlights-grid {
@@ -1252,7 +1302,8 @@ a + div:hover {
 .mental-health-images-about {
     display: flex;
     flex-direction: row;
-    width: 20vw;
+    width: 100%;
+    height: auto;
     gap: var(--wrapper);
     justify-content: space-between;
 }
@@ -1331,7 +1382,7 @@ a + div:hover {
 }
 
 .log-in-box {
-    padding: 2.5rem var(--rhythm);
+    padding: 2rem var(--wrapper);
     border: var(--borders);
     border-radius: var(--wrapper);
     border-color: var(--borders-color);
@@ -1339,6 +1390,7 @@ a + div:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 40vw;
 }
 
 .label-above-input {
@@ -1351,6 +1403,22 @@ a + div:hover {
 .underline {
     text-decoration: underline;
     color: var(--borders-color);
+}
+
+.contact-us-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: var(--wrapper);
+    margin-block-end: 3rem;
+    
+    input {
+        width: 50vw;
+        border: var(--borders);
+        border-radius: var(--wrapper);
+        border-color: var(--borders-color);
+        font-family: var(--sans_serif);
+    }
 }
 
 /* media queries */
@@ -1462,6 +1530,7 @@ a + div:hover {
         img {
             width: 50vw;
             height: auto;
+            object-fit: cover;
         }
     }
 
@@ -1472,6 +1541,8 @@ a + div:hover {
         img {
             width: 100%;
             height: 50vh;
+            object-fit: cover;
+
         }
     }
     
@@ -1547,9 +1618,17 @@ a + div:hover {
 
     .about-mental-health {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
         height: auto;
+
+        .extra-padding {
+            order: 2;
+        }
+    }
+
+    .mental-health-images-about {
+        order: 0;
     }
 
     /* footer elements */
@@ -1578,6 +1657,13 @@ a + div:hover {
         margin-inline-end: 0;
         row-gap: var(--rhythm);
         column-gap: 1rem;
+    }
+
+    .product-card > img {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        align-content: center;
     }
 }
 
@@ -1721,6 +1807,23 @@ a + div:hover {
         text-wrap: pretty;
     }
 
+    /* changing of home page banners and images in the background since I chose to do it as basckground images in css */
+    .category-discoloration {
+        background-image: url(../graphics/home/discoloration_small.jpg);
+    }
+    
+    .category-texture {
+        background-image: url(../graphics/home/textured_skin_small.jpg);
+    }
+    
+    .first-banner {
+        background-image: url(../graphics/home/banner_image_top_small.jpg);
+    }
+    
+    .second-banner {
+        background-image: url(../graphics/home/banner5_small.jpg);
+    }
+
     .hero-text {
         padding: 1rem;
         width: 100%;
@@ -1750,7 +1853,7 @@ a + div:hover {
 
     .images-slideshow {
         img {
-            height: 50vh;
+            height: 80vh;
             width: auto;
         }
     }
@@ -1840,6 +1943,18 @@ a + div:hover {
     }
 
 
+    .three-img-in-a-row {
+        grid-template-columns: 1fr;
+    }
+
+    .who-cares-first-img {
+        display: none;
+    }
+
+    .who-cares-third-img {
+        display: none;
+    }
+
     /* footer */
     .item-form {
         display: grid;
@@ -1850,8 +1965,3 @@ a + div:hover {
 
     
 }
-
-
-
-
-

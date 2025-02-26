@@ -27,8 +27,8 @@
                 </div>
                 <li class="logo"><a href="index.html">
                     <picture class="logo">
-                        <source type="webp" src="graphics/logo/logo.webp" />
-                        <img src="graphics/logo/logo.png" alt="logo" />
+                        <source type="webp" src="graphics/logo.webp" />
+                        <img src="graphics/logo.webp" alt="logo" />
                     </picture>
                 </a></li>
                 <div class="icons-side">
@@ -73,7 +73,13 @@
         </div>
         <section class="about-header border-around">
             <div>
-                <img src="graphics/home/banner5.webp" alt="banner image for about page">
+                <picture>
+                    <source
+                        media="(max-width: 700px)"
+                        srcset="graphics/home/banner5_small.jpg"
+                    />
+                    <img src="graphics/home/banner5.jpg" width="900" height="1200" alt="banner image for about page showing clearly breakout mask">
+                </picture>
                 <div class="extra-padding">
                     <div>
                         <h1 class="mono">Welcome to our world.</h1>
@@ -99,9 +105,27 @@
 
         <section class="border-around">
             <div class="three-img-in-a-row">
-                <img src="graphics/home/insta2.jpg" alt="">
-                <img src="graphics/home/insta3.jpg" alt="">
-                <img src="graphics/home/insta5.jpg" alt="">
+                <picture class="who-cares-first-img">
+                    <source
+                        media="(max-width: 700px)"
+                        srcset="graphics/about/insta2_small.jpg"
+                    />
+                    <img src="graphics/about/insta2.jpg" width="900" height="1200" alt="topicals promo pic">
+                </picture>
+                <picture class="who-cares-second-img">
+                    <source
+                    media="(max-width: 700px)"
+                    srcset="graphics/about/insta5_small.jpg"
+                    />
+                    <img src="graphics/about/insta5.jpg" width="900" height="1200" alt="topicals promo pic">
+                </picture>
+                <picture class="who-cares-third-img">
+                    <source
+                        media="(max-width: 700px)"
+                        srcset="graphics/about/insta3_small.jpg"
+                    />
+                    <img src="graphics/about/insta3.jpg" width="900" height="1200" alt="topicals promo pic">
+                </picture>
             </div>
 
             <div class="extra-padding">
@@ -111,7 +135,13 @@
         </section>
 
         <section class="about-advisory border-around">
-            <img src="graphics/home/insta1.jpg" alt="">
+            <picture>
+                <source
+                    media="(max-width: 700px)"
+                    srcset="graphics/about/insta1_small.jpg"
+                />
+                <img src="graphics/about/insta1.jpg" width="900" height="1200" alt="topicals instagram pic">
+            </picture>
             <div>
                 <h2>Our science</h2>
                 <p>We are constantly improving our formulas based on customer feedback and new clinical findings to ensure that our products work effectively, and gently on all skin types. Topical sproducts are always free from dyes and animal testing.</p>
@@ -128,11 +158,24 @@
                 <div class="extra-padding">
                     <h2>Mental Health Advocacy</h2>
                     <p>People with chronic skin conditions are 2-6 times more likely to experience anxiety and depression. Why? Because we're taught to aim for perfection when life (and skin) is fluid and messy.</p>
-                    <p>Topicals donates a percentage of our profits to important mental health movements to help raise awareness around the connection between mental health and skin health. To date, we've donated to mental health organizations like Therapy for Black Girls, Fearless Femmes 100, Sad Girls Club, and JED Foundation. When you support Topicals, you support mental health advocacy for  those who need it most. </p>
+                    <p>Topicals donates a percentage of our profits to important mental health movements to help raise awareness around the connection between mental health and skin health. </p>
+                    <p>To date, we've donated to mental health organizations like Therapy for Black Girls, Fearless Femmes 100, Sad Girls Club, and JED Foundation. When you support Topicals, you support mental health advocacy for  those who need it most.</p>
                     </div>
                 <div class="mental-health-images-about">
-                    <img src="graphics/home/insta4.jpg" alt="">
-                    <img src="graphics/home/insta6.jpg" alt="">
+                    <picture>
+                        <source
+                            media="(max-width: 700px)"
+                            srcset="graphics/about/insta4_small.jpg"
+                        />
+                        <img src="graphics/about/insta4.jpg" width="900" height="1200" alt="topicals promo pic">
+                    </picture>
+                    <picture>
+                        <source
+                            media="(max-width: 700px)"
+                            srcset="graphics/about/insta6_small.jpg"
+                        />
+                        <img src="graphics/about/insta6.jpg" width="900" height="1200" alt="topicals promo pic">
+                    </picture>
                 </div>
         </section>
     </main>
@@ -148,6 +191,7 @@
             <li><a href="shopall.html">Products</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="account.html">Account</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul> 
         
         <ul class="list-follow-us">

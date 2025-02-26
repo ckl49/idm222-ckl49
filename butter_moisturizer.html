@@ -27,8 +27,8 @@
                 </div>
                 <li class="logo"><a href="index.html">
                     <picture class="logo">
-                        <source type="webp" src="graphics/logo/logo.webp" />
-                        <img src="graphics/logo/logo.png" alt="logo" />
+                        <source type="webp" src="graphics/logo.webp" />
+                        <img src="graphics/logo.webp" alt="logo">
                     </picture>
                 </a></li>
                 <div class="icons-side">
@@ -76,10 +76,37 @@
 
         <section class="product-header">
             <div class="images-slideshow scrolldiv">
-                <img src="graphics/butter_moist/butter_moist1.webp" alt="">
-                <img src="graphics/butter_moist/butter_moist3.webp" alt="">
-                <img src="graphics/butter_moist/butter_moist4.webp" alt="">
-                <img src="graphics/butter_moist/butter_moist2.webp" alt="">
+                <picture>
+                    <source
+                        media="(max-width: 700px)"
+                        srcset="graphics/butter_moist/butter_moist1_small.jpg"
+                    />
+                    <img src="graphics/butter_moist/butter_moist1.jpg" width="900" height="1200" alt="like butter moisturizer">
+                </picture>
+
+                <picture>
+                    <source
+                        media="(max-width: 700px)"
+                        srcset="graphics//butter_moist/butter_moist3_small.jpg"
+                    />
+                    <img src="graphics/butter_moist/butter_moist3.jpg" width="900" height="1200" alt="like butter moisturizer">
+                </picture>
+
+                <picture>
+                    <source
+                        media="(max-width: 700px)"
+                        srcset="graphics/butter_moist/butter_moist4.jpg_small.jpg"
+                    />
+                    <img src="graphics/butter_moist/butter_moist4.jpg" width="900" height="1200" alt="like butter moisturizer">
+                </picture>
+
+                <picture>
+                    <source
+                        media="(max-width: 700px)"
+                        srcset="graphics/butter_moist/butter_moist2.jpg_small.jpg"
+                    />
+                    <img src="graphics/butter_moist/butter_moist2.jpg" width="900" height="1200" alt="like butter moisturizer">
+                </picture>
             </div>
             <div class="product-information">
                 <div>
@@ -143,11 +170,23 @@
             </div>
             <div class="before-after">
                 <figure>
-                    <img src="graphics/butter_moist/butter_moist_before.webp" alt="before using like butter moisturizer">
+                    <picture>
+                        <source
+                            media="(max-width: 700px)"
+                            srcset="graphics/butter_moist/butter_moist_before_small.jpg"
+                        />
+                        <img src="graphics/butter_moist/butter_moist_before.jpg" width="900" height="1200" alt="before using like butter moisturizer">
+                    </picture>
                     <figcaption>Before</figcaption>
                 </figure>
                 <figure>
-                    <img src="graphics/butter_moist/butter_moist_after.webp" alt="after using like butter moisturizer">
+                    <picture>
+                        <source
+                            media="(max-width: 700px)"
+                            srcset="graphics/butter_moist/butter_moist_after_small.jpg"
+                        />
+                        <img src="graphics/butter_moist/butter_moist_after.jpg" width="900" height="1200" alt="after using like butter moisturizer">
+                    </picture>
                     <figcaption>After</figcaption>
                 </figure>
             </div>
@@ -155,7 +194,13 @@
 
         <section class="one-three-grid">
             <div class="img-border">
-                <img src="graphics/butter_moist/butter_moist1.webp" alt="like butter moisturizer product shot">
+                <picture>
+                    <source
+                        media="(max-width: 700px)"
+                        srcset="graphics/butter_moist/butter_moist1_small.jpg"
+                    />
+                    <img src="graphics/butter_moist/butter_moist1.jpg" width="900" height="1200" alt="like butter moisturizer">
+                </picture>            
             </div>
 
             <div class="how-to-apply">
@@ -365,6 +410,7 @@
             <li><a href="shopall.html">Products</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="account.html">Account</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul> 
         
         <ul class="list-follow-us">
