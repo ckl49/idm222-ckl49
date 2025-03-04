@@ -1784,6 +1784,10 @@ did this because it was the way thata i decided to overlay text on images rather
 
 @media (min-width: 320px) and (max-width: 700px) {
 
+    html {
+        justify-content: center;
+    }
+
     main {
         width: 90vw;
     }
