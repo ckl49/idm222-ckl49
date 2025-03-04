@@ -69,6 +69,7 @@ body {
     justify-items: center;
     justify-self: center;
     justify-content: center;
+    width: 90vw;
 }
 
 main {
@@ -215,6 +216,7 @@ header {
     justify-items: center;
     margin-block-start: var(--rhythm);
     margin-block-end: var(--rhythm);
+    width: 90vw;
 }
 
 
@@ -1788,15 +1790,12 @@ did this because it was the way thata i decided to overlay text on images rather
     html {
         justify-content: center;
     }
-
-    main {
-        width: 90vw;
-    }
-
+    
     body {
         display: flex;
         flex-direction: column;
-        width: 90vw;
+        margin-inline-start: var(--wrapper);
+        margin-inline-end: var(--wrapper);
         justify-content: center;
         justify-items: center;
     }
@@ -2100,7 +2099,7 @@ did this because it was the way thata i decided to overlay text on images rather
     /* footer */
     .item-form {
         display: grid;
-        width: 100%;
+        width: 90vw;
         grid-row-start: 1;
         grid-column: 1 / 5;
     }
@@ -2108,6 +2107,7 @@ did this because it was the way thata i decided to overlay text on images rather
     .contact-us-body {
         gap: var(--wrapper);
         margin-block-end: var(--rhythm);
+        margin-inline-start: 0;
         align-items: baseline;
 
         input {
@@ -2115,7 +2115,7 @@ did this because it was the way thata i decided to overlay text on images rather
         }
 
         button {
-            width: 100%;
+            width: 90vw;
         }
 
     }
@@ -2130,16 +2130,16 @@ did this because it was the way thata i decided to overlay text on images rather
     /* log-in */
     
     .log-in-box {
-        width: 80vw;
+        width: 90vw;
     }
 
     .log-in-section {
         input {
-            width: 70vw;
+            width: 80vw;
         }
 
         button {
-            width: 70vw;
+            width: 80vw;
         }
 
         p {
