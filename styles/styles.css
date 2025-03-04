@@ -18,6 +18,17 @@
     src: url(/fonts/NotoSansMono-VariableFont_wdth\,wght.ttf);
 }
 
+@keyframes slideUpFadeIn {
+    from {
+      transform: translateY(30px); /* Starts 30px below */
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
 html {
     --foreground-color: #0d0d0d;
     --background-color: #EBEBEB;
@@ -35,7 +46,7 @@ html {
 
     --sans_serif: 'FunnelSans', system-ui, 'Segoe', sans-serif;
     --display_font: 'FunnelDisplay', system-ui, 'Segoe', sans-serif;
-    --contrast_mono: 'NotoSansMono', Courier New, serif;
+    --contrast_mono: 'NotoSansMono', Courier, serif;
 
     --wrapper: 0.5rem;
     --rhythm: 1.5rem;
@@ -43,6 +54,8 @@ html {
     --background-blur: blur(8px);
     --stroke-light: rgba(0, 0, 0, 0.4);
     --borders: 1px solid var(--borders-color);
+
+    --glide-in: slideUpFadeIn 0.5s ease-out 0.1s forwards;
 }
 
 * {
@@ -200,6 +213,8 @@ section {
     height: auto;
     margin-block-start: var(--rhythm);
     margin-block-end: var(--rhythm);
+    opacity: 0;
+    animation: var(--glide-in);
 }
 
 figure {
@@ -391,6 +406,9 @@ a + div:hover {
     background-position: center;
     border-radius: var(--wrapper);
     align-items: end;
+    opacity: 0;
+    animation: var(--glide-in);
+
 }
 
 
@@ -713,6 +731,8 @@ did this because it was the way thata i decided to overlay text on images rather
     grid-template-rows: auto;
     column-gap: 1rem;
     row-gap: 2rem;
+    opacity: 0;
+    animation: var(--glide-in);
 }
 
 .product-card {
