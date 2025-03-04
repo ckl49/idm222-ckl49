@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <header>
     <nav class="center">
@@ -63,18 +63,97 @@
 </header>
 <body>
     <main>
-        <!-- breadcrumbs -->
-         <!-- Home -->
-          <!-- Shopping Cart -->
-        <h1>Your Shopping Cart</h1>
-        <p>Here are the products you would like to order:</p>
+        <div class="breadcrumb">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <p>/</p>
+                <li>Your Shopping Cart</li>
+            </ul>
+        </div>
+        <section class="shopping-cart-section">
+            <div class="shopping-container">
+                <div class="shopping-header">
+                    <h1>Your Shopping Cart</h1>
+                    <p>Here are the products you would like to order:</p>
+                </div>
+                <div class="product-one-cart">
+                    <picture>
+                        <source
+                            media="(max-width: 700px)"
+                            srcset="graphics/slick_salve_acai/slick_salve_acai1_small.jpg"
+                        />
+                        <img src="graphics/slick_salve_acai/slick_salve_acai1.jpg" width="900" height="1200" alt="slick salve acai">
+                    </picture>
+                    <div class="cart-text-side">
+                        <div class="product-one-cart-text">
+                            <h2>Slick Salve - Acai</h2>
+                            <p>Quantity: 1</p>
+                            <p class="mono">Remove</p>
+                        </div>
+                        <div class="product-one-cart-text">
+                            <h2>$16</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-one-cart">
+                    <picture>
+                        <source
+                            media="(max-width: 700px)"
+                            srcset="graphics/slick_salve_mint/slick_salve_mint1_small.jpg"
+                        />
+                        <img src="graphics/slick_salve_mint/slick_salve_mint1.jpg" width="900" height="1200" alt="slick salve mint">
+                    </picture>
+                    <div class="cart-text-side">
+                        <div class="product-one-cart-text">
+                            <h2>Slick Salve - Mint</h2>
+                            <p>Quantity: 1</p>
+                            <p class="mono">Remove</p>
+                        </div>
+                        <div class="product-one-cart-text">
+                            <h2>$16</h2>
+                        </div>
+                    </div>
+                </div>
+            <div class="total-cart">
+                <h3>Your total: $34</h3>
+                <button class="shop-all-button">Check out now</button>
+            </div>
+            </div>
+        </section>
         <div>
             
         </div>
 
     </main>
-    <footer>
+    <footer class="width-ninety-wrapper">
+        <div class="item-form">
+            <form class="item-form">
+                <label><h4>Subscribe to our newsletter:</h4></label>
+                <input class="text-box" type="email" id="email" name="email" placeholder="Enter your email" required>
+                <button class="shop-all-button" type="submit">Submit</button>
+            </form>
+        </div>
+        <ul class="list-explore">
+            <h4>Explore</h4>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shopall.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul> 
         
+        <ul class="list-follow-us">
+            <h4>Follow us</h4>
+            <li><a href="https://www.tiktok.com/@topicals">Tik Tok</a></li>
+            <li><a href="https://www.instagram.com/topicals">Instagram</a>
+            </li>
+            <li><a href="https://x.com/topicals">X</a></li>
+        </ul>
+
+        <div class="logo-in-footer-div">
+            <img class="logo-footer" src="graphics/logo.webp" alt="">
+            <p>Copyright Topicals 2025</p>
+        </div>
     </footer>
 </body>
 </html>

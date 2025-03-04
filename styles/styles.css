@@ -626,8 +626,77 @@ did this because it was the way thata i decided to overlay text on images rather
     img {
         width: 200px;
         height: 250px;
+        border-radius: var(--wrapper);
     } 
+
+    picture {
+        border-radius: var(--wrapper);
+    }
 }
+
+/* shopping cart */
+.shopping-cart-section {
+    display: flex;
+    justify-content: center;
+
+    button {
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+    }
+
+    h3 {
+        margin-block-end: 0;
+    }
+}
+
+.shopping-header {
+    margin-block-end: 1rem;
+}
+
+.cart-text-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: var(--wrapper);
+}
+
+.shopping-container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    align-self: baseline;
+    gap: var(--wrapper);
+}
+
+.product-one-cart {
+    display: flex;
+    flex-direction: row;
+    border: var(--borders-color);
+    gap: var(--rhythm);
+    padding: var(--wrapper);
+    border: var(--borders);
+    border-radius: var(--wrapper);
+
+    img {
+        height: 15vh;
+        width: fit-content;
+    }
+
+    picture {
+        border-radius: var(--wrapper);
+        height: fit-content;
+        width: fit-content;
+    }
+}
+
+.total-cart {
+   display: flex; 
+   flex-direction: column;
+    align-items: end;
+    margin-block-end: 2rem;
+}
+
 
 /* shop all page */
 .shop-all {
@@ -637,9 +706,9 @@ did this because it was the way thata i decided to overlay text on images rather
     margin-block-end: 4rem;
     display: grid;
     justify-self: center;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: auto;
-    column-gap: 2rem;
+    column-gap: 1rem;
     row-gap: 2rem;
 }
 
@@ -987,24 +1056,24 @@ did this because it was the way thata i decided to overlay text on images rather
 
     }
     
-    .beforeafter-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        border: var(--borders);
-        padding: 1rem;
-        border-radius: var(--wrapper);
-        height: fit-content;
+.beforeafter-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: var(--borders);
+    padding: 1rem;
+    border-radius: var(--wrapper);
+    height: fit-content;
 
 
-        /* li {
-            list-style: decimal-leading-zero;
-            padding: 0;
-        }
+    /* li {
+        list-style: decimal-leading-zero;
+        padding: 0;
+    }
 
-        ul {
-            padding-inline-start: 1.5rem;
-        } */
-        }
+    ul {
+        padding-inline-start: 1.5rem;
+    } */
+    }
 
 
 /* .beforeafter-section img {
@@ -1235,6 +1304,7 @@ did this because it was the way thata i decided to overlay text on images rather
     border: var(--borders);
     background-color: var(--secondary-color);
     padding: var(--wrapper);
+    height: 3rem;
     box-shadow: none 3px 3px 6px 4px rgba(0, 0, 0, 0.9);
 }
 
@@ -1379,6 +1449,10 @@ did this because it was the way thata i decided to overlay text on images rather
         background-color: var(--secondary-color);
         width: 30vw;
     }
+
+    button {
+        width: 30vw;
+    }
 }
 
 .log-in-box {
@@ -1408,9 +1482,12 @@ did this because it was the way thata i decided to overlay text on images rather
 .contact-us-body {
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
+    justify-content: center;
+    align-items: center;
     gap: var(--wrapper);
-    margin-block-end: 3rem;
+    margin-block-end: 5vh;
+
+
     
     input {
         width: 50vw;
@@ -1651,7 +1728,7 @@ did this because it was the way thata i decided to overlay text on images rather
     /* shop all page */
 
     .shop-all {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         margin-inline-start: 0;
         margin-inline-end: 0;
@@ -1665,9 +1742,51 @@ did this because it was the way thata i decided to overlay text on images rather
         object-fit: cover;
         align-content: center;
     }
+
+    /* contact us media query */
+
+    .contact-us-body {
+        gap: var(--wrapper);
+        margin-block-end: var(--rhythm);
+        align-items: baseline;
+
+        input {
+            width: 80vw;
+        }
+    }
+
+    /* .shopping-cart-section {
+        width: 9;
+    } */
+
+    .shopping-container {
+        width: 80vw;
+    }
+
+    /* log in page  */
+    
+    .log-in-box {
+        width: 50vw;
+    }
+
+    .log-in-section {
+        input {
+            width: 40vw;
+        }
+
+        button {
+            width: 40vw;
+        }
+    }
+    
+
 }
 
 @media (min-width: 320px) and (max-width: 700px) {
+
+    main {
+        width: 90vw;
+    }
 
     body {
         display: flex;
@@ -1779,6 +1898,22 @@ did this because it was the way thata i decided to overlay text on images rather
         top: 0; /* Slide into view */
     }
 
+    .shop-all {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--wrapper);
+    }
+
+    .shop-all-header {
+        flex-direction: column;
+        gap: var(--wrapper);
+        margin-block-end: var(--rhythm);
+    }
+
+    .product-card img {
+        min-width: 140px;
+        min-height: 180px;
+    }
+    
 
     /* row needed to push the hamburger and search bar into a row in mobile menu so both sides even*/
     .row {
@@ -1852,8 +1987,10 @@ did this because it was the way thata i decided to overlay text on images rather
     /* product pages under here */
 
     .images-slideshow {
+        height: fit-content;
+
         img {
-            height: 80vh;
+            height: 60vh;
             width: auto;
         }
     }
@@ -1963,5 +2100,46 @@ did this because it was the way thata i decided to overlay text on images rather
         grid-column: 1 / 5;
     }
 
+    .contact-us-body {
+        gap: var(--wrapper);
+        margin-block-end: var(--rhythm);
+        align-items: baseline;
+
+        input {
+            width: 90vw;
+        }
+
+        button {
+            width: 100%;
+        }
+
+    }
+
+
+    /* shopping cart  */
     
+    .shopping-container {
+        width: 90vw;
+    }
+
+    /* log-in */
+    
+    .log-in-box {
+        width: 80vw;
+    }
+
+    .log-in-section {
+        input {
+            width: 70vw;
+        }
+
+        button {
+            width: 70vw;
+        }
+
+        p {
+            padding: var(--wrapper);
+            text-align: center;
+        }
+    }
 }
