@@ -1790,11 +1790,11 @@ did this because it was the way thata i decided to overlay text on images rather
     html {
         justify-content: center;
     }
-    
+
     body {
         display: flex;
         flex-direction: column;
-        margin-inline-start: var(--wrapper);
+        margin-inline-start: var(--rhythm);
         margin-inline-end: var(--wrapper);
         justify-content: center;
         justify-items: center;
