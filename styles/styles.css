@@ -1789,13 +1789,14 @@ did this because it was the way thata i decided to overlay text on images rather
 
     html {
         justify-content: center;
+        margin: 0 1rem;
     }
 
     body {
         display: flex;
         flex-direction: column;
-        margin-inline-start: 1.25rem;
-        margin-inline-end: var(--wrapper);
+        /* margin-inline-start: 1.25rem; */
+        /* margin-inline-end: var(--wrapper); */
         justify-content: center;
         justify-items: center;
     }
