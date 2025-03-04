@@ -49,6 +49,8 @@ html {
     box-sizing: border-box;
     background-color: var(--background-color);
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 img {
@@ -64,7 +66,6 @@ img {
 body {
     display: flex;
     flex-direction: column;
-    /* width: 80vw; */
     justify-items: center;
     justify-self: center;
     justify-content: center;
@@ -1795,7 +1796,7 @@ did this because it was the way thata i decided to overlay text on images rather
     body {
         display: flex;
         flex-direction: column;
-
+        width: 90vw;
         justify-content: center;
         justify-items: center;
     }
