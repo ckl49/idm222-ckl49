@@ -20,7 +20,7 @@
 
 @keyframes slideUpFadeIn {
     from {
-      transform: translateY(30px); /* Starts 30px below */
+      transform: translateY(15px); /* Starts 30px below */
       opacity: 0;
     }
     to {
@@ -627,10 +627,6 @@ did this because it was the way thata i decided to overlay text on images rather
 
 .carousel > .product-card {
     width: 100%;
-    /* min-width: 275px;
-    max-width: 300px;
-    min-height: 175px;
-    max-height: 200px; */
     height: auto;
 
     a > h2 {
@@ -639,7 +635,7 @@ did this because it was the way thata i decided to overlay text on images rather
     }
 
     p {
-        font-size: 0.75rem;
+        font-size: 0.9rem;
         margin-block-end: 0.75rem;
         background-color: var(--secondary-color);
     }
@@ -795,32 +791,6 @@ did this because it was the way thata i decided to overlay text on images rather
     display: flex;
     justify-self: center;
 }
-
-/* was redundant because i specified even more closely with the next statement */
-/* .product-card > h2 {
-    font-family: var(--sans_serif);
-    background-color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin-block-end: 1rem;
-    margin-block-start: 1rem;
-} */
-
-/* .product-card > a > h2 {
-    font-size: 1.5rem;
-    background-color: var(--secondary-color);
-    font-family: var(--sans_serif);
-    background-color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin-block-end: 1rem;
-    margin-block-start: 1rem;
-} */
-/* 
-.product-card > p {
-    font-family: var(--contrast_mono);
-    background-color: var(--secondary-color);
-    margin-block-end: 2rem;
-    margin-block-start: 0;
-} */
 
 .shop-all-header {
     display: flex;
@@ -1036,6 +1006,7 @@ did this because it was the way thata i decided to overlay text on images rather
     gap: var(--wrapper);
     padding:0;
     margin-block-start: 0;
+    margin-block-end: 1rem;
 }
 
 /* .product-highlights-grid > ul {
@@ -1198,28 +1169,32 @@ did this because it was the way thata i decided to overlay text on images rather
 
 
 .faq-section h3 {
-    margin-block-start: var(--wrapper);
-    margin-block-end: var(--wrapper);
     background-color: var(--secondary-color);
-    }
+}
     
 .faq-section summary {
-    list-style: none;
-    background-color: var(--secondary-color);
-    transition: details 1s ease-in-out;
-    padding-top: var(--wrapper);
+    /* transition: details 1s ease-in-out; */
     width: 100%;
 }
 
 .faq-section details {
     margin-block-end: 1rem;
-    margin-block-start: var(--wrapper);
-    padding: var(--wrapper);
-    background-color: var(--background-color);
+    margin-block-start: 1rem;
+    padding: 0.75rem;
     border-radius: var(--wrapper);
     border: var(--borders);
     width: 100%;
+    cursor: pointer;
+
+    div {
+        padding-top: var(--wrapper);
+    }
+
+    p {
+        margin-bottom: 0;
+    }
 }
+
 
 /* reviews at the bottom */
 
@@ -1672,8 +1647,14 @@ did this because it was the way thata i decided to overlay text on images rather
     }
 
     .key-ingredients-part {
-        margin: 0;
+        padding: var(--wrapper);
         order: 2;
+
+        li {
+            margin-left: var(--wrapper);
+            margin-block-end: var(--wrapper);
+            line-height: 1.5rem;
+        }
     }
 
     .reviews-heading {
@@ -1815,8 +1796,6 @@ did this because it was the way thata i decided to overlay text on images rather
     body {
         display: flex;
         flex-direction: column;
-        margin-inline-start: 1.25rem;
-        margin-inline-end: var(--wrapper);
         justify-content: center;
         justify-items: center;
     }
@@ -1938,7 +1917,30 @@ did this because it was the way thata i decided to overlay text on images rather
         min-width: 140px;
         min-height: 180px;
     }
-    
+
+    .product-card {
+        h2 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.1rem;
+        }
+    }
+
+    .carousel {
+        .product-card {
+        h2 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.1rem;
+        }
+        }
+    }
 
     /* row needed to push the hamburger and search bar into a row in mobile menu so both sides even*/
     .row {
