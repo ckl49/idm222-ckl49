@@ -94,12 +94,13 @@ main {
 }
 
 
-h1, h2, h3, h4, h5 {
+h2, h3, h4, h5 {
     font-family: var(--display_font);
     font-weight: 500;
     color: var(--foreground-color);
     margin-block-start: 0;
     margin-block-end: var(--wrapper);
+    line-height: 1.5rem;
 }
 
 p, li, ul, summary, details, form {
@@ -109,6 +110,11 @@ p, li, ul, summary, details, form {
 
 h1 {
     font-size: 3rem;
+    font-family: var(--display_font);
+    font-weight: 500;
+    color: var(--foreground-color);
+    margin-block-start: 0;
+    margin-block-end: var(--wrapper);
 }
 
 h2 {
@@ -436,7 +442,6 @@ a + div:hover {
         line-height: var(--rhythm);
     }
 }
-
 /* background images on index called in the media queries to change the sizing later for responsiveness and image optimization
 
 did this because it was the way thata i decided to overlay text on images rather than having image in html
@@ -688,7 +693,7 @@ did this because it was the way thata i decided to overlay text on images rather
     flex-direction: row;
     border: var(--borders-color);
     gap: var(--rhythm);
-    padding: var(--wrapper);
+    padding: 1rem;
     border: var(--borders);
     border-radius: var(--wrapper);
 
@@ -1099,6 +1104,10 @@ did this because it was the way thata i decided to overlay text on images rather
     align-items: center;
     padding: 1rem;
 
+    h3 {
+        line-height: 2rem;
+    }
+
     ul {
         line-height: 2rem;
         padding-inline-start: 1rem;
@@ -1118,6 +1127,8 @@ did this because it was the way thata i decided to overlay text on images rather
     padding: var(--wrapper);
     border: var(--borders);
     border-radius: var(--wrapper);
+    align-items: center;
+
     
 }
 
@@ -1143,12 +1154,14 @@ did this because it was the way thata i decided to overlay text on images rather
 
     li {
         list-style:decimal-leading-zero;
-        line-height: 2rem;
+        line-height: 1.5rem;
+        margin-block-end: var(--wrapper);
     }
 
     ul {
         margin-block-end: var(--wrapper);
         margin-block-start: var(--wrapper);
+        margin-inline-start: var(--wrapper);
 
     }
 
@@ -1638,7 +1651,7 @@ did this because it was the way thata i decided to overlay text on images rather
         }
 
         div {
-            align-self: start;
+            align-self: center;
             padding-block-end: 0;
         }
     }
