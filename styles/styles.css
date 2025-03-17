@@ -156,10 +156,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     margin-block-end: 3rem;
 
-    /* grid-template-areas: 'form . ul ul'; */
     gap: var(--rhythm);
-    /* flex-direction: row;
-    justify-content: space-between; */
 
     ul {
         display: flex;
@@ -1790,6 +1787,7 @@ did this because it was the way thata i decided to overlay text on images rather
 
     html {
         justify-content: center;
+        justify-self: center;
         /* margin: 0 1rem; */
     }
 
@@ -1798,6 +1796,7 @@ did this because it was the way thata i decided to overlay text on images rather
         flex-direction: column;
         justify-content: center;
         justify-items: center;
+        justify-self: center;
     }
 
     h1 {
