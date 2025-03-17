@@ -1797,7 +1797,10 @@ did this because it was the way thata i decided to overlay text on images rather
         justify-content: center;
         justify-items: center;
         justify-self: center;
-        margin: 0;
+        width: 90vw;
+        margin: 0 auto;
+        /* margin-inline-start: 1rem;
+        margin-inline-end: 1rem; */
     }
 
     h1 {
