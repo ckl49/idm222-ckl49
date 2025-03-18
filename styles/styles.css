@@ -100,7 +100,6 @@ h2, h3, h4, h5 {
     color: var(--foreground-color);
     margin-block-start: 0;
     margin-block-end: var(--wrapper);
-    line-height: 1.5rem;
 }
 
 p, li, ul, summary, details, form {
@@ -189,6 +188,7 @@ footer {
         grid-template-rows: auto;
         width: 40vw;
         gap: var(--wrapper);
+        height: fit-content;
 
         label {
             height: fit-content;
@@ -311,7 +311,7 @@ a + div:hover {
     justify-content: right;
     flex-direction: row;
     gap: var(--rhythm);
-    grid-template-columns: repeat(1fr, 3);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-start: 7;
 }
 
@@ -572,38 +572,24 @@ did this because it was the way thata i decided to overlay text on images rather
     border-radius: var(--wrapper);
     border-color: #E5E9EC;
     border: 1px;
-    box-shadow: (0 4 8 #000000 0.15);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+    a {
+        color: var(--background-color);
+    }
 }
 
 .shop-all-button:hover {
     background-color: var(--highlight-color-4);
     color: var(--button-color);
-    /* border-color: var(--button-color);
-    border: var(--borders);
-    border-radius: var(--wrapper); */
-    /* margin: 0; */
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.0);
     cursor: pointer;
+
+    a {
+        color: var(--foreground-color);
+    }
 }
 
-/* .category-img {
-    width: 50vw;
-    height: auto;
-} */
-
-/* .container > h2 {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    height: auto;
-    padding: 1rem;
-    padding-right: 2rem;
-    position: absolute;
-    bottom: 17rem;
-    left: 10rem;
-    color: var(--background-color);
-    background-color: var(--transparency-film);
-    border-radius: 1rem;
-} */
 
 .carousel-section {
     display: flex;
@@ -634,6 +620,8 @@ did this because it was the way thata i decided to overlay text on images rather
     a > h2 {
         font-size: 1.25rem;
         margin-block-start: 0rem;
+        line-height: 1.5rem;
+
     }
 
     p {
@@ -743,6 +731,7 @@ did this because it was the way thata i decided to overlay text on images rather
     width: 100%;
     height: auto;
     gap: 1rem;
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.05);
 
     h2, div, p {
         background-color: var(--secondary-color);
@@ -751,13 +740,14 @@ did this because it was the way thata i decided to overlay text on images rather
     h2 {
         font-size: var(--rhythm);
         margin-block-start: 0;
+        line-height: 1.5rem;
     }
 }
 
 .product-card > .shop-all-button {
     margin: 0;
     width: 100%;
-    justify-content: baseline;
+    align-items: baseline;
     justify-self: baseline;
     justify-items: baseline;
 }
@@ -817,6 +807,7 @@ did this because it was the way thata i decided to overlay text on images rather
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--rhythm);
+    box-shadow:  2px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .images-slideshow {
@@ -857,8 +848,6 @@ did this because it was the way thata i decided to overlay text on images rather
     justify-content: space-between;
     align-items: start;
 
-    /* display: grid;
-    grid-template-columns: 4fr 1fr; */
 }
 
 
@@ -871,6 +860,7 @@ did this because it was the way thata i decided to overlay text on images rather
     gap: var(--rhythm);
     justify-content: center;
     align-items: center;
+    box-shadow:  2px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .img-border {
@@ -1059,25 +1049,9 @@ did this because it was the way thata i decided to overlay text on images rather
     padding: 1rem;
     border-radius: var(--wrapper);
     height: fit-content;
-
-
-    /* li {
-        list-style: decimal-leading-zero;
-        padding: 0;
+    box-shadow:  2px 4px 4px 0px rgba(0, 0, 0, 0.15);
     }
 
-    ul {
-        padding-inline-start: 1.5rem;
-    } */
-    }
-
-
-/* .beforeafter-section img {
-    width: 30vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-} */
 
 .beforeafter-section figure {
     margin: var(--wrapper);
@@ -1124,11 +1098,11 @@ did this because it was the way thata i decided to overlay text on images rather
 .video-key-ingredients-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: var(--wrapper);
+    padding: 1rem;
     border: var(--borders);
     border-radius: var(--wrapper);
     align-items: center;
-
+    box-shadow:  2px 4px 4px 0px rgba(0, 0, 0, 0.15);
     
 }
 
@@ -1175,7 +1149,9 @@ did this because it was the way thata i decided to overlay text on images rather
     border: var(--borders);
     border-radius: var(--wrapper);
     background-color: var(--secondary-color);
+    box-shadow:  2px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
+
 
 
 .faq-section h3 {
@@ -1246,6 +1222,10 @@ did this because it was the way thata i decided to overlay text on images rather
     align-items: center;
 }
 
+.reviewer-info p {
+    font-weight: 400;
+}
+
 .reviews-heading {
     display: flex;
     flex-direction: row;
@@ -1284,6 +1264,7 @@ did this because it was the way thata i decided to overlay text on images rather
         margin-block-end: 0;
         color: var(--borders-color);
         font-family: var(--contrast_mono);
+        font-size: 14px;
     }
 }
 
@@ -1313,7 +1294,14 @@ did this because it was the way thata i decided to overlay text on images rather
     background-color: var(--secondary-color);
     padding: var(--wrapper);
     height: 3rem;
-    box-shadow: none 3px 3px 6px 4px rgba(0, 0, 0, 0.9);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.item-form label {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -1325,7 +1313,7 @@ did this because it was the way thata i decided to overlay text on images rather
     margin-block-start: 0;
 
     h1 {
-        font-weight: 600;
+        font-weight: 500;
         margin-block-end: var(--rhythm);
     }
 }
@@ -1855,7 +1843,7 @@ did this because it was the way thata i decided to overlay text on images rather
     /* zeroed out the menu so that the margins wouldn't be messed up */
     .top-menu {
         display: grid;
-        grid: repeat(1fr, 7);
+        grid-template-columns: repeat(7, 1fr);
     }
 
     .text-side {
